@@ -10,6 +10,23 @@ public evidence is not claimed to be universally byte-identical to that source.
 See [public release provenance](../public-release.md) for the mapping and checks.
 New assessments supplement old ones rather than changing historical conclusions.
 
+## Byte-preserving checkouts
+
+A2's manifest hashes raw archived bytes, including their original line endings.
+The initial public import normalized seven CRLF files to LF in Git, so Windows
+checkouts matched the manifest while Linux checkouts failed it. The original
+public working-tree bytes were verified against every unchanged manifest digest
+and restored to Git. Targeted `.gitattributes` rules disable text conversion for
+all A2 manifest inputs and A3 content-addressed quantum artifacts. Preserve these
+bytes; do not normalize them or recompute historical digests to accommodate Git.
+A3 has no separate raw-file manifest; its quantum artifact filenames are SHA-256
+digests, and its offline verifier checks the stored scientific assessments.
+
+After committing, run `uv run --locked python scripts/verify_evidence_checkouts.py`
+to validate A2's manifest and A3's artifact hashes in fresh clones with both
+`core.autocrlf=false` and `core.autocrlf=true`. CI runs this acceptance check on
+Windows and Ubuntu alongside the historical assessment tests and A3 verifier.
+
 | Evidence | Meaning |
 |---|---|
 | [Web NVIDIA acceptance](a3-nvidia-web-20261009/README.md) | Two actual browser cases, real screenshots, seven calls, scoped Bell checks and QEC binding gate |

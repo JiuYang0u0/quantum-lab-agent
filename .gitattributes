@@ -1,3 +1,15 @@
 # Preserve canonical license and the byte-for-byte README archive on checkout.
 LICENSE -text
 docs/legacy-usage.md -text
+
+# Byte-addressed scientific evidence: preserve the original bytes on every OS.
+docs/evidence/a2-nvidia-20261008/bell_ideal/artifacts/*.json -text
+docs/evidence/a2-nvidia-20261008/bell_ideal/report.txt -text
+docs/evidence/a2-nvidia-20261008/bell_ideal/summary.json -text
+docs/evidence/a2-nvidia-20261008/bell_ideal/trace.json -text
+docs/evidence/a2-nvidia-20261008/ghz3_gate_noise/artifacts/*.json -text
+docs/evidence/a2-nvidia-20261008/ghz3_gate_noise/report.txt -text
+docs/evidence/a2-nvidia-20261008/ghz3_gate_noise/summary.json -text
+docs/evidence/a2-nvidia-20261008/ghz3_gate_noise/trace.json -text
+docs/evidence/a2-nvidia-20261008/summary.json -text
+docs/evidence/a3-nvidia-web-20261009/quantum-artifacts/*.json -text
