@@ -84,5 +84,6 @@ See [Contributing](CONTRIBUTING.md), [Security](SECURITY.md),
 [citation metadata](CITATION.cff).
 
 Copyright 2026 JiuYang. Licensed under [Apache License 2.0](LICENSE).
-Third-party dependencies retain their own licenses. No hosted release, package
-publication, or remote repository is claimed by this local preparation.
+Third-party dependencies retain their own licenses. The experimental repository is
+public at https://github.com/JiuYang0u0/quantum-lab-agent; no tagged release or
+package-registry publication has been made.

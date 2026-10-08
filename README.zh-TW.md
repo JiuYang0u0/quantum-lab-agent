@@ -82,4 +82,4 @@ uv run --locked python docs/evidence/a3-nvidia-web-20261009/verify.py
 [引用資料](CITATION.cff)。
 
 Copyright 2026 JiuYang。採用 [Apache License 2.0](LICENSE)。第三方依賴保留各自授權。
-本次為本機準備，不宣稱已建立遠端儲存庫、發布套件或正式版本。
+公開試驗儲存庫：https://github.com/JiuYang0u0/quantum-lab-agent 。尚未發布正式tag版本或套件到registry。

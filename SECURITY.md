@@ -9,12 +9,9 @@ maintenance window yet.
 
 ## Reporting
 
-No private security reporting channel or email is configured for this local
-repository. If an issue tracker is available, open only a minimal, non-sensitive
-request asking maintainer JiuYang to establish a private channel. **Do not post
-credentials, exploit payloads, personal data, private traces, or sensitive details
-publicly.** Wait for a verified private contact before sharing those details.
-For a local copy, contact the person who supplied it to arrange a private channel.
+Use GitHub's enabled [private vulnerability reporting channel](https://github.com/JiuYang0u0/quantum-lab-agent/security/advisories/new).
+Do not post credentials, personal data, private traces, or sensitive exploit details
+in public issues. Remove secrets from attachments even when reporting privately.
 
 If a key is exposed, revoke/rotate it with its provider. Redaction is best-effort,
 not a guarantee that arbitrary prompts or reports are safe to publish. Do not
