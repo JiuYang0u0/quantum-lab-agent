@@ -1,0 +1,22 @@
+{
+  "qec_run_id": "2098347816a84f4f8e1df09cbd221819",
+  "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+  "checkpoint_id": "checkpoint-963a76774c7e42a78a5f18e8424bf874",
+  "comparison_id": "comparison-281d491341a047eea673beb96c76d75b",
+  "models": [
+    "google/gemma-4-e2b",
+    "google/gemma-4-e4b",
+    "qwen3.8-27b@q4_0",
+    "qwen3.8-27b@q4_k_m",
+    "qwen3.5-9b-uncensored-hauhaucs-aggressive",
+    "ornith-1.0-9b",
+    "qwen3.6-35b-a3b-mtp",
+    "text-embedding-nomic-embed-text-v1.5"
+  ],
+  "model_probe": {
+    "run_id": "476ac87566a4493fbefe4e9fb9d5ba78",
+    "status": "time_budget",
+    "tools_used": 0,
+    "output": "No verified tool evidence."
+  }
+}

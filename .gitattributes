@@ -1,0 +1,3 @@
+# Preserve canonical license and the byte-for-byte README archive on checkout.
+LICENSE -text
+docs/legacy-usage.md -text

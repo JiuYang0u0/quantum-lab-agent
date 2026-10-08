@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, cite this metadata and record the exact Git commit and evidence scope."
+title: "Quantum Lab Agent"
+type: software
+authors:
+  - name: "JiuYang"
+version: "0.1.0"
+license: Apache-2.0
+abstract: "A local research workbench for bounded classical LLM orchestration of quantum simulation and external QEC experiments. Version 0.1.0 is unreleased."

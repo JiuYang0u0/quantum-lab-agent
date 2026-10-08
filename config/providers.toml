@@ -1,0 +1,10 @@
+# Documentation profiles. Runtime selects these defaults via --profile and QLA_* env.
+[lmstudio]
+base_url = "http://127.0.0.1:1234/v1"
+model = "google/gemma-4-e2b"
+api_key_env = "QLA_API_KEY"
+
+[nvidia]
+base_url = "https://integrate.api.nvidia.com/v1"
+model_env = "QLA_MODEL" # Required; no invented/default remote model.
+api_key_env = "QLA_API_KEY"

@@ -1,0 +1,2133 @@
+{
+  "schema_version": 1,
+  "run_id": "2098347816a84f4f8e1df09cbd221819",
+  "created": 1791363060.6224473,
+  "prompt": "deterministic CPU integration: sample -> train -> compare -> read -> list",
+  "events": [
+    {
+      "seq": 1,
+      "created": 1791363060.6332839,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_sample",
+        "args": {
+          "circuit": {
+            "rounds": 1
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        }
+      }
+    },
+    {
+      "seq": 2,
+      "created": 1791363060.6520412,
+      "kind": "intent",
+      "data": {
+        "intent_id": "ba393100d8ea5060ea184a04ceeba2a0ae54e3f0e395bcbeb61778cabc2e5c15",
+        "tool": "qec_sample",
+        "args": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        }
+      }
+    },
+    {
+      "seq": 3,
+      "created": 1791363060.9250698,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 4,
+      "created": 1791363061.2009487,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 5,
+      "created": 1791363061.483291,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 6,
+      "created": 1791363061.7857199,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 7,
+      "created": 1791363062.0563605,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 8,
+      "created": 1791363062.329464,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 9,
+      "created": 1791363062.6191154,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 10,
+      "created": 1791363062.898411,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 11,
+      "created": 1791363063.168402,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 12,
+      "created": 1791363063.4669154,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 13,
+      "created": 1791363063.759616,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 14,
+      "created": 1791363064.0541449,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 15,
+      "created": 1791363064.343526,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 16,
+      "created": 1791363064.722865,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 17,
+      "created": 1791363065.0212362,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 18,
+      "created": 1791363065.3110108,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 19,
+      "created": 1791363065.6029787,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 20,
+      "created": 1791363065.8974526,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 21,
+      "created": 1791363066.1945717,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:00.864270+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 22,
+      "created": 1791363066.476377,
+      "kind": "job",
+      "data": {
+        "id": "job-5fef0788be114f31af0156dd0e7e92a6",
+        "kind": "sample",
+        "status": "succeeded",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T08:51:00.861325+00:00",
+        "updated_at": "2026-10-07T08:51:06.269732+00:00",
+        "artifact_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+        "error": null
+      }
+    },
+    {
+      "seq": 23,
+      "created": 1791363066.500735,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_sample",
+        "result": {
+          "job_id": "job-5fef0788be114f31af0156dd0e7e92a6",
+          "artifact_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "status": "succeeded"
+        }
+      }
+    },
+    {
+      "seq": 24,
+      "created": 1791363066.5136058,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_train",
+        "args": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02"
+        }
+      }
+    },
+    {
+      "seq": 25,
+      "created": 1791363066.5387945,
+      "kind": "intent",
+      "data": {
+        "intent_id": "1413836f43d4214c72d0e773a8e900cd64105e7e811059d3c33c6d3423b9fcba",
+        "tool": "qec_train",
+        "args": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "hidden_size": 8,
+            "learning_rate": 0.001,
+            "seed": 123,
+            "device": "cpu",
+            "threads": 1
+          }
+        }
+      }
+    },
+    {
+      "seq": 26,
+      "created": 1791363066.6144974,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 27,
+      "created": 1791363066.8973882,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 28,
+      "created": 1791363067.1743572,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 29,
+      "created": 1791363067.45776,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 30,
+      "created": 1791363067.7374995,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 31,
+      "created": 1791363068.2212305,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 32,
+      "created": 1791363068.5034778,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 33,
+      "created": 1791363068.7798705,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 34,
+      "created": 1791363069.065809,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 35,
+      "created": 1791363069.3524683,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 36,
+      "created": 1791363069.6656158,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 37,
+      "created": 1791363069.9420497,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 38,
+      "created": 1791363070.2241566,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 39,
+      "created": 1791363070.5107944,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 40,
+      "created": 1791363070.8057654,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 41,
+      "created": 1791363071.0878222,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 42,
+      "created": 1791363071.3691788,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 43,
+      "created": 1791363071.662569,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 44,
+      "created": 1791363071.9359958,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 45,
+      "created": 1791363072.2109878,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 46,
+      "created": 1791363072.4990861,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:06.582837+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 47,
+      "created": 1791363072.7736316,
+      "kind": "job",
+      "data": {
+        "id": "job-6091ca43b4f34e44b3be871c9a16006c",
+        "kind": "train",
+        "status": "succeeded",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T08:51:06.579837+00:00",
+        "updated_at": "2026-10-07T08:51:12.637138+00:00",
+        "artifact_id": "checkpoint-963a76774c7e42a78a5f18e8424bf874",
+        "error": null
+      }
+    },
+    {
+      "seq": 48,
+      "created": 1791363072.789222,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_train",
+        "result": {
+          "job_id": "job-6091ca43b4f34e44b3be871c9a16006c",
+          "artifact_id": "checkpoint-963a76774c7e42a78a5f18e8424bf874",
+          "status": "succeeded"
+        }
+      }
+    },
+    {
+      "seq": 49,
+      "created": 1791363072.8034294,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_compare",
+        "args": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "checkpoint_ids": [
+            "checkpoint-963a76774c7e42a78a5f18e8424bf874"
+          ]
+        }
+      }
+    },
+    {
+      "seq": 50,
+      "created": 1791363072.832537,
+      "kind": "intent",
+      "data": {
+        "intent_id": "1778b95153c8a559f3775f12c276834885b4fa4c583442ed510417dfe290dad6",
+        "tool": "qec_compare",
+        "args": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "checkpoint_ids": [
+            "checkpoint-963a76774c7e42a78a5f18e8424bf874"
+          ],
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "device": "cpu",
+            "threads": 1
+          },
+          "allow_cross_p": false
+        }
+      }
+    },
+    {
+      "seq": 51,
+      "created": 1791363072.9276218,
+      "kind": "job",
+      "data": {
+        "id": "job-54d22788617141e78893229aa8b2db18",
+        "kind": "compare",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "checkpoint_ids": [
+            "checkpoint-963a76774c7e42a78a5f18e8424bf874"
+          ],
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "threads": 1,
+            "device": "cpu"
+          },
+          "allow_cross_p": false
+        },
+        "created_at": "2026-10-07T08:51:12.884480+00:00",
+        "updated_at": "2026-10-07T08:51:12.888789+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 52,
+      "created": 1791363073.2089057,
+      "kind": "job",
+      "data": {
+        "id": "job-54d22788617141e78893229aa8b2db18",
+        "kind": "compare",
+        "status": "succeeded",
+        "request": {
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "checkpoint_ids": [
+            "checkpoint-963a76774c7e42a78a5f18e8424bf874"
+          ],
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "threads": 1,
+            "device": "cpu"
+          },
+          "allow_cross_p": false
+        },
+        "created_at": "2026-10-07T08:51:12.884480+00:00",
+        "updated_at": "2026-10-07T08:51:12.973958+00:00",
+        "artifact_id": "comparison-281d491341a047eea673beb96c76d75b",
+        "error": null
+      }
+    },
+    {
+      "seq": 53,
+      "created": 1791363073.2960558,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_compare",
+        "result": {
+          "schema_version": 2,
+          "artifact_id": "comparison-281d491341a047eea673beb96c76d75b",
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "config": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+          "identity": {
+            "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+            "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+            "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+            "num_detectors": 4,
+            "num_observables": 1
+          },
+          "seeds": {
+            "train": 16138347438539916964,
+            "validation": 134183728835869882,
+            "test": 11601846009883706861
+          },
+          "test_digest": "a430fb5c8124326d8a548a7ed0a2adc8d9e48a51c30c0692f9a72594b091340f",
+          "predictions_hash": "084499405a2b1c011661b9531a734bf8dca175c12a2bd5f5929623c7a2058c73",
+          "sampling_seconds": 0.0035500999074429274,
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "threads": 1,
+            "device": "cpu"
+          },
+          "allow_cross_p": false,
+          "results": [
+            {
+              "decoder": "mwpm",
+              "checkpoint_id": null,
+              "prediction_key": "prediction_0",
+              "shots": 32,
+              "errors": 0,
+              "logical_error_rate": 0.0,
+              "ci": [
+                0.0,
+                0.1071827150573635
+              ],
+              "setup_seconds": 0.00041069998405873775,
+              "warmup_seconds": 5.600042641162872e-06,
+              "inference_seconds": [
+                0.0006911000236868858
+              ],
+              "end_to_end_seconds": [
+                0.00072310003452003
+              ],
+              "decode_seconds": 0.00072310003452003,
+              "microseconds_per_shot": 22.596876078750938,
+              "unseen_fraction": null,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": null,
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            },
+            {
+              "decoder": "lookup",
+              "checkpoint_id": null,
+              "prediction_key": "prediction_1",
+              "shots": 32,
+              "errors": 0,
+              "logical_error_rate": 0.0,
+              "ci": [
+                0.0,
+                0.1071827150573635
+              ],
+              "setup_seconds": 0.0004719998687505722,
+              "warmup_seconds": 4.800036549568176e-06,
+              "inference_seconds": [
+                9.750016033649445e-05
+              ],
+              "end_to_end_seconds": [
+                0.00013659987598657608
+              ],
+              "decode_seconds": 0.00013659987598657608,
+              "microseconds_per_shot": 4.2687461245805025,
+              "unseen_fraction": 0.0,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              },
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            },
+            {
+              "decoder": "mlp",
+              "checkpoint_id": "checkpoint-963a76774c7e42a78a5f18e8424bf874",
+              "prediction_key": "prediction_2",
+              "shots": 32,
+              "errors": 3,
+              "logical_error_rate": 0.09375,
+              "ci": [
+                0.032400962626319516,
+                0.24218499335778831
+              ],
+              "setup_seconds": 0.031570899998769164,
+              "warmup_seconds": 6.00004568696022e-06,
+              "inference_seconds": [
+                0.0006522000767290592
+              ],
+              "end_to_end_seconds": [
+                0.001387299969792366
+              ],
+              "decode_seconds": 0.001387299969792366,
+              "microseconds_per_shot": 43.35312405601144,
+              "unseen_fraction": null,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              },
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            }
+          ],
+          "paired": [
+            {
+              "a": "prediction_0",
+              "b": "prediction_1",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 0,
+              "both_wrong": 0,
+              "both_correct": 32
+            },
+            {
+              "a": "prediction_0",
+              "b": "prediction_2",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 3,
+              "both_wrong": 0,
+              "both_correct": 29
+            },
+            {
+              "a": "prediction_1",
+              "b": "prediction_2",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 3,
+              "both_wrong": 0,
+              "both_correct": 29
+            }
+          ],
+          "interpretation": "Fixed-shot evaluation; small runs are smoke tests, not superiority evidence.",
+          "timing": "Wall seconds, CUDA synchronized. Setup=fit/load; warmup separate. Inference=batched forward/decode only; end-to-end=encoding/transfers/forward/assembly per repeat, excluding fit/load/warmup. decode_seconds=median end-to-end."
+        }
+      }
+    },
+    {
+      "seq": 54,
+      "created": 1791363073.313174,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_read_report",
+        "args": {
+          "result_id": "comparison-281d491341a047eea673beb96c76d75b"
+        }
+      }
+    },
+    {
+      "seq": 55,
+      "created": 1791363073.3627942,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_read_report",
+        "result": {
+          "schema_version": 2,
+          "artifact_id": "comparison-281d491341a047eea673beb96c76d75b",
+          "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+          "config": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+          "identity": {
+            "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+            "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+            "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+            "num_detectors": 4,
+            "num_observables": 1
+          },
+          "seeds": {
+            "train": 16138347438539916964,
+            "validation": 134183728835869882,
+            "test": 11601846009883706861
+          },
+          "test_digest": "a430fb5c8124326d8a548a7ed0a2adc8d9e48a51c30c0692f9a72594b091340f",
+          "predictions_hash": "084499405a2b1c011661b9531a734bf8dca175c12a2bd5f5929623c7a2058c73",
+          "sampling_seconds": 0.0035500999074429274,
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "threads": 1,
+            "device": "cpu"
+          },
+          "allow_cross_p": false,
+          "results": [
+            {
+              "decoder": "mwpm",
+              "checkpoint_id": null,
+              "prediction_key": "prediction_0",
+              "shots": 32,
+              "errors": 0,
+              "logical_error_rate": 0.0,
+              "ci": [
+                0.0,
+                0.1071827150573635
+              ],
+              "setup_seconds": 0.00041069998405873775,
+              "warmup_seconds": 5.600042641162872e-06,
+              "inference_seconds": [
+                0.0006911000236868858
+              ],
+              "end_to_end_seconds": [
+                0.00072310003452003
+              ],
+              "decode_seconds": 0.00072310003452003,
+              "microseconds_per_shot": 22.596876078750938,
+              "unseen_fraction": null,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": null,
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            },
+            {
+              "decoder": "lookup",
+              "checkpoint_id": null,
+              "prediction_key": "prediction_1",
+              "shots": 32,
+              "errors": 0,
+              "logical_error_rate": 0.0,
+              "ci": [
+                0.0,
+                0.1071827150573635
+              ],
+              "setup_seconds": 0.0004719998687505722,
+              "warmup_seconds": 4.800036549568176e-06,
+              "inference_seconds": [
+                9.750016033649445e-05
+              ],
+              "end_to_end_seconds": [
+                0.00013659987598657608
+              ],
+              "decode_seconds": 0.00013659987598657608,
+              "microseconds_per_shot": 4.2687461245805025,
+              "unseen_fraction": 0.0,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              },
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            },
+            {
+              "decoder": "mlp",
+              "checkpoint_id": "checkpoint-963a76774c7e42a78a5f18e8424bf874",
+              "prediction_key": "prediction_2",
+              "shots": 32,
+              "errors": 3,
+              "logical_error_rate": 0.09375,
+              "ci": [
+                0.032400962626319516,
+                0.24218499335778831
+              ],
+              "setup_seconds": 0.031570899998769164,
+              "warmup_seconds": 6.00004568696022e-06,
+              "inference_seconds": [
+                0.0006522000767290592
+              ],
+              "end_to_end_seconds": [
+                0.001387299969792366
+              ],
+              "decode_seconds": 0.001387299969792366,
+              "microseconds_per_shot": 43.35312405601144,
+              "unseen_fraction": null,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              },
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            }
+          ],
+          "paired": [
+            {
+              "a": "prediction_0",
+              "b": "prediction_1",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 0,
+              "both_wrong": 0,
+              "both_correct": 32
+            },
+            {
+              "a": "prediction_0",
+              "b": "prediction_2",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 3,
+              "both_wrong": 0,
+              "both_correct": 29
+            },
+            {
+              "a": "prediction_1",
+              "b": "prediction_2",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 3,
+              "both_wrong": 0,
+              "both_correct": 29
+            }
+          ],
+          "interpretation": "Fixed-shot evaluation; small runs are smoke tests, not superiority evidence.",
+          "timing": "Wall seconds, CUDA synchronized. Setup=fit/load; warmup separate. Inference=batched forward/decode only; end-to-end=encoding/transfers/forward/assembly per repeat, excluding fit/load/warmup. decode_seconds=median end-to-end."
+        }
+      }
+    },
+    {
+      "seq": 56,
+      "created": 1791363073.3781226,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_list_artifacts",
+        "args": {}
+      }
+    },
+    {
+      "seq": 57,
+      "created": 1791363073.5642493,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_list_artifacts",
+        "result": {
+          "datasets": [
+            {
+              "artifact_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+              "schema_version": 2,
+              "config": {
+                "code": "repetition",
+                "distance": 3,
+                "rounds": 1,
+                "p": 0.03,
+                "after_clifford_depolarization": null,
+                "before_round_data_depolarization": null,
+                "before_measure_flip_probability": null,
+                "after_reset_flip_probability": null,
+                "seed": 42
+              },
+              "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+              "identity": {
+                "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+                "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+                "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+                "num_detectors": 4,
+                "num_observables": 1
+              },
+              "seeds": {
+                "train": 16138347438539916964,
+                "validation": 134183728835869882,
+                "test": 11601846009883706861
+              },
+              "shots": {
+                "train": 64,
+                "validation": 16,
+                "test": 32
+              },
+              "sampling_seconds": 0.0035500999074429274,
+              "stim_version": "1.16.0",
+              "samples_hash": "9cf7db88ab4f77251c34fde6fb21eada85f3bbd9198a5ce1d4e4551f725c66a4"
+            }
+          ],
+          "checkpoints": [
+            {
+              "schema_version": 2,
+              "artifact_id": "checkpoint-963a76774c7e42a78a5f18e8424bf874",
+              "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+              "circuit_config": {
+                "code": "repetition",
+                "distance": 3,
+                "rounds": 1,
+                "p": 0.03,
+                "after_clifford_depolarization": null,
+                "before_round_data_depolarization": null,
+                "before_measure_flip_probability": null,
+                "after_reset_flip_probability": null,
+                "seed": 42
+              },
+              "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+              "identity": {
+                "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+                "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+                "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+                "num_detectors": 4,
+                "num_observables": 1
+              },
+              "train_config": {
+                "device": "cpu",
+                "architecture": "mlp",
+                "epochs": 1,
+                "patience": 1,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "hidden_size": 8,
+                "seed": 123,
+                "threads": 1
+              },
+              "best_epoch": 1,
+              "selection_metric": "validation_bce",
+              "best_validation_bce": 0.659074068069458,
+              "history": [
+                {
+                  "epoch": 1,
+                  "train_bce": 0.6540658175945282,
+                  "validation_bce": 0.659074068069458
+                }
+              ],
+              "train_seconds": 5.957654299912974,
+              "torch_version": "2.14.1+cpu",
+              "stim_version": "1.16.0",
+              "dataset_samples_hash": "9cf7db88ab4f77251c34fde6fb21eada85f3bbd9198a5ce1d4e4551f725c66a4",
+              "weights_hash": "485a652d065767f80553d7818bd20f4a9d14235b7b056db3b4758dccb06f295f"
+            }
+          ],
+          "comparisons": [
+            {
+              "schema_version": 2,
+              "artifact_id": "comparison-281d491341a047eea673beb96c76d75b",
+              "dataset_id": "dataset-ead311b110994cd88c6bc30c0b50fe02",
+              "config": {
+                "code": "repetition",
+                "distance": 3,
+                "rounds": 1,
+                "p": 0.03,
+                "after_clifford_depolarization": null,
+                "before_round_data_depolarization": null,
+                "before_measure_flip_probability": null,
+                "after_reset_flip_probability": null,
+                "seed": 42
+              },
+              "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+              "identity": {
+                "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+                "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+                "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+                "num_detectors": 4,
+                "num_observables": 1
+              },
+              "seeds": {
+                "train": 16138347438539916964,
+                "validation": 134183728835869882,
+                "test": 11601846009883706861
+              },
+              "test_digest": "a430fb5c8124326d8a548a7ed0a2adc8d9e48a51c30c0692f9a72594b091340f",
+              "predictions_hash": "084499405a2b1c011661b9531a734bf8dca175c12a2bd5f5929623c7a2058c73",
+              "sampling_seconds": 0.0035500999074429274,
+              "benchmark": {
+                "warmup": 0,
+                "repeats": 1,
+                "batch_size": 32,
+                "threads": 1,
+                "device": "cpu"
+              },
+              "allow_cross_p": false,
+              "results": [
+                {
+                  "decoder": "mwpm",
+                  "checkpoint_id": null,
+                  "prediction_key": "prediction_0",
+                  "shots": 32,
+                  "errors": 0,
+                  "logical_error_rate": 0.0,
+                  "ci": [
+                    0.0,
+                    0.1071827150573635
+                  ],
+                  "setup_seconds": 0.00041069998405873775,
+                  "warmup_seconds": 5.600042641162872e-06,
+                  "inference_seconds": [
+                    0.0006911000236868858
+                  ],
+                  "end_to_end_seconds": [
+                    0.00072310003452003
+                  ],
+                  "decode_seconds": 0.00072310003452003,
+                  "microseconds_per_shot": 22.596876078750938,
+                  "unseen_fraction": null,
+                  "threads": 1,
+                  "device": "cpu",
+                  "train_noise": null,
+                  "test_noise": {
+                    "after_clifford_depolarization": 0.03,
+                    "before_round_data_depolarization": 0.03,
+                    "before_measure_flip_probability": 0.03,
+                    "after_reset_flip_probability": 0.03
+                  }
+                },
+                {
+                  "decoder": "lookup",
+                  "checkpoint_id": null,
+                  "prediction_key": "prediction_1",
+                  "shots": 32,
+                  "errors": 0,
+                  "logical_error_rate": 0.0,
+                  "ci": [
+                    0.0,
+                    0.1071827150573635
+                  ],
+                  "setup_seconds": 0.0004719998687505722,
+                  "warmup_seconds": 4.800036549568176e-06,
+                  "inference_seconds": [
+                    9.750016033649445e-05
+                  ],
+                  "end_to_end_seconds": [
+                    0.00013659987598657608
+                  ],
+                  "decode_seconds": 0.00013659987598657608,
+                  "microseconds_per_shot": 4.2687461245805025,
+                  "unseen_fraction": 0.0,
+                  "threads": 1,
+                  "device": "cpu",
+                  "train_noise": {
+                    "after_clifford_depolarization": 0.03,
+                    "before_round_data_depolarization": 0.03,
+                    "before_measure_flip_probability": 0.03,
+                    "after_reset_flip_probability": 0.03
+                  },
+                  "test_noise": {
+                    "after_clifford_depolarization": 0.03,
+                    "before_round_data_depolarization": 0.03,
+                    "before_measure_flip_probability": 0.03,
+                    "after_reset_flip_probability": 0.03
+                  }
+                },
+                {
+                  "decoder": "mlp",
+                  "checkpoint_id": "checkpoint-963a76774c7e42a78a5f18e8424bf874",
+                  "prediction_key": "prediction_2",
+                  "shots": 32,
+                  "errors": 3,
+                  "logical_error_rate": 0.09375,
+                  "ci": [
+                    0.032400962626319516,
+                    0.24218499335778831
+                  ],
+                  "setup_seconds": 0.031570899998769164,
+                  "warmup_seconds": 6.00004568696022e-06,
+                  "inference_seconds": [
+                    0.0006522000767290592
+                  ],
+                  "end_to_end_seconds": [
+                    0.001387299969792366
+                  ],
+                  "decode_seconds": 0.001387299969792366,
+                  "microseconds_per_shot": 43.35312405601144,
+                  "unseen_fraction": null,
+                  "threads": 1,
+                  "device": "cpu",
+                  "train_noise": {
+                    "after_clifford_depolarization": 0.03,
+                    "before_round_data_depolarization": 0.03,
+                    "before_measure_flip_probability": 0.03,
+                    "after_reset_flip_probability": 0.03
+                  },
+                  "test_noise": {
+                    "after_clifford_depolarization": 0.03,
+                    "before_round_data_depolarization": 0.03,
+                    "before_measure_flip_probability": 0.03,
+                    "after_reset_flip_probability": 0.03
+                  }
+                }
+              ],
+              "paired": [
+                {
+                  "a": "prediction_0",
+                  "b": "prediction_1",
+                  "a_wrong_b_correct": 0,
+                  "a_correct_b_wrong": 0,
+                  "both_wrong": 0,
+                  "both_correct": 32
+                },
+                {
+                  "a": "prediction_0",
+                  "b": "prediction_2",
+                  "a_wrong_b_correct": 0,
+                  "a_correct_b_wrong": 3,
+                  "both_wrong": 0,
+                  "both_correct": 29
+                },
+                {
+                  "a": "prediction_1",
+                  "b": "prediction_2",
+                  "a_wrong_b_correct": 0,
+                  "a_correct_b_wrong": 3,
+                  "both_wrong": 0,
+                  "both_correct": 29
+                }
+              ],
+              "interpretation": "Fixed-shot evaluation; small runs are smoke tests, not superiority evidence.",
+              "timing": "Wall seconds, CUDA synchronized. Setup=fit/load; warmup separate. Inference=batched forward/decode only; end-to-end=encoding/transfers/forward/assembly per repeat, excluding fit/load/warmup. decode_seconds=median end-to-end."
+            }
+          ],
+          "warnings": []
+        }
+      }
+    },
+    {
+      "seq": 58,
+      "created": 1791363073.5907817,
+      "kind": "finish",
+      "data": {
+        "status": "completed"
+      }
+    }
+  ]
+}

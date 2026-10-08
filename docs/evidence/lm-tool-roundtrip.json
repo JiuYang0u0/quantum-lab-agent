@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": "476ac87566a4493fbefe4e9fb9d5ba78",
+  "created": 1791363073.6400547,
+  "prompt": "Call qec_list_artifacts with {} exactly once. When its result arrives, stop.",
+  "events": [
+    {
+      "seq": 59,
+      "created": 1791363073.654059,
+      "kind": "experiment",
+      "data": {
+        "limits": {
+          "max_steps": 2,
+          "max_tools": 1,
+          "seconds": 90.0
+        }
+      }
+    },
+    {
+      "seq": 60,
+      "created": 1791363163.6563852,
+      "kind": "finish",
+      "data": {
+        "status": "time_budget",
+        "tools_used": 0
+      }
+    }
+  ]
+}

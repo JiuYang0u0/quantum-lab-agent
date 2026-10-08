@@ -1,0 +1,87 @@
+{
+  "run_id": "6d0274702e894581b10c97025a456019",
+  "task_success": false,
+  "termination_status": "time_budget",
+  "report_produced": false,
+  "failure_classifications": [
+    "time_budget",
+    "incomplete_or_invalid_artifact_chain",
+    "no_grounded_report"
+  ],
+  "tool_errors": [],
+  "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+  "checkpoint_id": null,
+  "comparison_id": null,
+  "steps": [
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 739,
+        "completion_tokens": 854,
+        "total_tokens": 1593,
+        "completion_tokens_details": {
+          "reasoning_tokens": 795
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 155.26500000013039
+    },
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 891,
+        "completion_tokens": 583,
+        "total_tokens": 1474,
+        "completion_tokens_details": {
+          "reasoning_tokens": 523
+        }
+      },
+      "step": 2,
+      "elapsed_seconds": 110.04700000002049
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-3215a3de5b764aadb4cd26786552207b",
+      "kind": "sample",
+      "artifact_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3"
+    }
+  ],
+  "numeric_provenance": [],
+  "elapsed_seconds": 300.71899999980815,
+  "completion_attempts": 2,
+  "completion_attempt_log": [
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 739,
+        "completion_tokens": 854,
+        "total_tokens": 1593,
+        "completion_tokens_details": {
+          "reasoning_tokens": 795
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 155.26500000013039
+    },
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 891,
+        "completion_tokens": 583,
+        "total_tokens": 1474,
+        "completion_tokens_details": {
+          "reasoning_tokens": 523
+        }
+      },
+      "step": 2,
+      "elapsed_seconds": 110.04700000002049
+    }
+  ],
+  "settings": {
+    "base_url": "http://127.0.0.1:1234/v1",
+    "model": "google/gemma-4-e2b",
+    "qec_url": "http://127.0.0.1:18000",
+    "max_tokens": 1024
+  }
+}

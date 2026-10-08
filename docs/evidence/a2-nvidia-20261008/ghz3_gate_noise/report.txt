@@ -1,0 +1,17 @@
+{"result": {"artifact_id": "eb5dbca045625e9ba162058ccd95047c9014a6c34379ab6ef08ee8ebf8f75c7c", "bit_order": "q[n-1]...q[0]; q0 least significant", "kind": "quantum_circuit", "schema_version": 1, "spec": {"gates": [{"angle": null, "name": "h", "qubits": [0]}, {"angle": null, "name": "cx", "qubits": [0, 1]}, {"angle": null, "name": "cx", "qubits": [0, 2]}], "preset": null, "qubits": 3, "target": "ghz"}, "target_definition": "independent analytic vector: (|0...0> + |1...1>)/sqrt(2)", "threshold": 0.999999, "verification": {"ideal_premeasurement_fidelity": 0.9999999999999996, "status": "verified", "threshold": 0.999999}, "versions": {"numpy": "2.5.3", "qiskit": "2.5.2", "qiskit-aer": "0.17.2"}}, "tool": "build_circuit"}
+
+{"result": {"circuit_id": "eb5dbca045625e9ba162058ccd95047c9014a6c34379ab6ef08ee8ebf8f75c7c", "ideal_premeasurement_fidelity": 0.9999999999999996, "status": "verified", "threshold": 0.999999}, "tool": "verify"}
+
+Quantum simulation [28762693f670f773b89c8a58cd2c6c2f1811d78c3482194801919a432cfaaa09]
+Circuit [eb5dbca045625e9ba162058ccd95047c9014a6c34379ab6ef08ee8ebf8f75c7c] target=ghz
+Ideal verification: verified
+Premeasurement fidelity: 0.926984
+Counts (1024 shots): {'000': 511, '001': 4, '010': 7, '011': 5, '100': 5, '101': 21, '110': 6, '111': 465}
+Fidelity is computed from the premeasurement density matrix, not inferred from counts.
+
+Quantum simulation [28762693f670f773b89c8a58cd2c6c2f1811d78c3482194801919a432cfaaa09]
+Circuit [eb5dbca045625e9ba162058ccd95047c9014a6c34379ab6ef08ee8ebf8f75c7c] target=ghz
+Ideal verification: verified
+Premeasurement fidelity: 0.926984
+Counts (1024 shots): {'000': 511, '001': 4, '010': 7, '011': 5, '100': 5, '101': 21, '110': 6, '111': 465}
+Fidelity is computed from the premeasurement density matrix, not inferred from counts.

@@ -1,0 +1,81 @@
+Isolated B artifacts/log: C:\Users\PUBLIC_USER\AppData\Local\Temp\opencode\qla-b-3gby9110
+{
+  "run_id": "472d85bd0cfa4b159045362a0259fac2",
+  "task_success": false,
+  "termination_status": "no_tool_calls",
+  "report_produced": false,
+  "failure_classifications": [
+    "completion_token_limit",
+    "no_tool_calls",
+    "incomplete_or_invalid_artifact_chain",
+    "no_grounded_report"
+  ],
+  "tool_errors": [],
+  "dataset_id": null,
+  "checkpoint_id": null,
+  "comparison_id": null,
+  "steps": [
+    {
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 739,
+        "completion_tokens": 1024,
+        "total_tokens": 1763,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1008
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 104.5619999999999
+    }
+  ],
+  "tool_calls": [],
+  "jobs": [],
+  "numeric_provenance": [],
+  "termination_source": "model",
+  "task_completion": "unverified",
+  "model_stop_observed": false,
+  "interpretation_status": "not_requested",
+  "elapsed_seconds": 104.65599999999995,
+  "completion_attempts": 1,
+  "completion_attempt_log": [
+    {
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 739,
+        "completion_tokens": 1024,
+        "total_tokens": 1763,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1008
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 104.5619999999999
+    }
+  ],
+  "settings": {
+    "base_url": "http://127.0.0.1:1234/v1",
+    "model": "google/gemma-4-e2b",
+    "qec_url": "http://127.0.0.1:18000",
+    "max_tokens": 1024
+  }
+}
+SUCCESS: The process with PID 25832 (child process of PID 26444) has been terminated.
+SUCCESS: The process with PID 26444 (child process of PID 25460) has been terminated.
+.\.venv\Scripts\python.exe : Traceback (most recent call last):
+At line:1 char:1
++ .\.venv\Scripts\python.exe scripts/isolated_eval.py --b-repo C:\Users ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+  File "C:\Users\PUBLIC_USER\Personal\20-Projects\quantum-lab-agent\scripts\isolated_eval.py", line 74, in <module>
+    main()
+  File "C:\Users\PUBLIC_USER\Personal\20-Projects\quantum-lab-agent\scripts\isolated_eval.py", line 63, in main
+    subprocess.run(command, check=True, timeout=args.seconds + 60 if args.multistep else 360)
+  File "C:\Users\PUBLIC_USER\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\PUBLIC_USER\\Personal\\20-Projects\\quantum-lab-agent\\.venv\\Scripts\\p
+ython.exe', 'C:\\Users\\PUBLIC_USER\\Personal\\20-Projects\\quantum-lab-agent\\scripts\\multistep_eval.py', '--output', '.qla
+/gemma-finalize-report-900', '--max-tokens', '1024', '--max-steps', '6', '--seconds', '900', '--finalize-on-report']' r
+eturned non-zero exit status 1.

@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    env_file: .env
+    environment:
+      QLA_QEC_URL: ${QLA_CONTAINER_QEC_URL:-http://host.docker.internal:8000}
+    ports: ["127.0.0.1:8100:8100"]
+    volumes: ["qla-data:/data"]
+  frontend:
+    build: ./frontend
+    ports: ["127.0.0.1:5174:80"]
+    depends_on: [api]
+volumes:
+  qla-data:

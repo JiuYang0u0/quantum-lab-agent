@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "run_id": "ce1710916ce644fe8fee2b3744c212ce",
+  "created": 1791367067.9042828,
+  "prompt": "Run a tiny QEC experiment: sample a repetition code distance 3, rounds 1, p 0.03, seed 42 with train_shots 64, validation_shots 16, test_shots 32. Train an mlp for 1 epoch on the returned dataset using remaining CPU defaults. Compare that same dataset using the returned checkpoint against MWPM and lookup. Use only artifact IDs returned by your tools. Produce a grounded report with errors/shots, LER, CI, decode seconds and artifact citations, then stop. The compare tool already returns the report; no need to list artifacts.",
+  "events": [
+    {
+      "seq": 1,
+      "created": 1791367067.9136655,
+      "kind": "experiment",
+      "data": {
+        "limits": {
+          "max_steps": 6,
+          "max_tools": 4,
+          "seconds": 300.0
+        }
+      }
+    },
+    {
+      "seq": 2,
+      "created": 1791367067.9223468,
+      "kind": "provider_settings",
+      "data": {
+        "base_url": "http://127.0.0.1:1234/v1",
+        "model": "google/gemma-4-e2b",
+        "qec_url": "http://127.0.0.1:18000",
+        "max_tokens": 1024
+      }
+    },
+    {
+      "seq": 3,
+      "created": 1791367137.8070815,
+      "kind": "model",
+      "data": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "T9Uo14M3qeuVcGgAjbixMqyE9oExAZgy",
+            "type": "function",
+            "function": {
+              "name": "qec_sample",
+              "arguments": "{\"circuit\": \"repetition code distance 3, rounds 1, p 0.03, seed 42\", \"sampling\": \"train_shots=64, validation_shots=16, test_shots=32\"}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seq": 4,
+      "created": 1791367137.8334992,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 513,
+          "completion_tokens": 953,
+          "total_tokens": 1466,
+          "completion_tokens_details": {
+            "reasoning_tokens": 887
+          }
+        },
+        "step": 1,
+        "elapsed_seconds": 69.875
+      }
+    },
+    {
+      "seq": 5,
+      "created": 1791367137.8589525,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_sample",
+        "args": {
+          "circuit": "repetition code distance 3, rounds 1, p 0.03, seed 42",
+          "sampling": "train_shots=64, validation_shots=16, test_shots=32"
+        }
+      }
+    },
+    {
+      "seq": 6,
+      "created": 1791367137.8801668,
+      "kind": "tool_error",
+      "data": {
+        "tool": "qec_sample",
+        "error": "Invalid arguments or tool response"
+      }
+    },
+    {
+      "seq": 7,
+      "created": 1791367257.1587381,
+      "kind": "model",
+      "data": {
+        "role": "assistant",
+        "content": "I am unable to complete this request because the initial sampling step (`qec_sample`) returned an error: `{\"error\": \"Invalid arguments or tool response\"}`. Therefore, no artifact ID was generated, and I cannot proceed with the subsequent steps of training and comparison as requested.",
+        "tool_calls": []
+      }
+    },
+    {
+      "seq": 8,
+      "created": 1791367257.193014,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 601,
+          "completion_tokens": 780,
+          "total_tokens": 1381,
+          "completion_tokens_details": {
+            "reasoning_tokens": 720
+          }
+        },
+        "step": 2,
+        "elapsed_seconds": 119.25
+      }
+    },
+    {
+      "seq": 9,
+      "created": 1791367257.2180882,
+      "kind": "finish",
+      "data": {
+        "status": "completed_with_errors",
+        "tools_used": 1
+      }
+    }
+  ]
+}

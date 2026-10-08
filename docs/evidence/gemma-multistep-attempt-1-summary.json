@@ -1,0 +1,83 @@
+{
+  "run_id": "ce1710916ce644fe8fee2b3744c212ce",
+  "task_success": false,
+  "termination_status": "completed_with_errors",
+  "report_produced": false,
+  "failure_classifications": [
+    "tool_or_evidence_error",
+    "incomplete_or_invalid_artifact_chain",
+    "no_grounded_report"
+  ],
+  "tool_errors": [
+    "Invalid arguments or tool response"
+  ],
+  "dataset_id": null,
+  "checkpoint_id": null,
+  "comparison_id": null,
+  "steps": [
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 513,
+        "completion_tokens": 953,
+        "total_tokens": 1466,
+        "completion_tokens_details": {
+          "reasoning_tokens": 887
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 69.875
+    },
+    {
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 601,
+        "completion_tokens": 780,
+        "total_tokens": 1381,
+        "completion_tokens_details": {
+          "reasoning_tokens": 720
+        }
+      },
+      "step": 2,
+      "elapsed_seconds": 119.25
+    }
+  ],
+  "jobs": [],
+  "numeric_provenance": [],
+  "elapsed_seconds": 189.43700000015087,
+  "completion_attempts": 2,
+  "completion_attempt_log": [
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 513,
+        "completion_tokens": 953,
+        "total_tokens": 1466,
+        "completion_tokens_details": {
+          "reasoning_tokens": 887
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 69.875
+    },
+    {
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 601,
+        "completion_tokens": 780,
+        "total_tokens": 1381,
+        "completion_tokens_details": {
+          "reasoning_tokens": 720
+        }
+      },
+      "step": 2,
+      "elapsed_seconds": 119.25
+    }
+  ],
+  "settings": {
+    "base_url": "http://127.0.0.1:1234/v1",
+    "model": "google/gemma-4-e2b",
+    "qec_url": "http://127.0.0.1:18000",
+    "max_tokens": 1024
+  }
+}

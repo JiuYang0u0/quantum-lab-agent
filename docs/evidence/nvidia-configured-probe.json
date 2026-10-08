@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "run_id": "7fe5a9aa042e41b0b583571a474601a0",
+  "created": 1791460050.0568337,
+  "prompt": "Native NVIDIA list-artifacts tool roundtrip; at most two completions",
+  "events": [
+    {
+      "seq": 1,
+      "created": 1791460050.0640614,
+      "kind": "provider_settings",
+      "data": {
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "model": "deepseek-ai/deepseek-v4.1-flash",
+        "qec_url": "http://127.0.0.1:18000",
+        "max_tokens": 2048
+      }
+    },
+    {
+      "seq": 2,
+      "created": 1791460076.5527983,
+      "kind": "model",
+      "data": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-8888e6a4f9a1a77a",
+            "type": "function",
+            "function": {
+              "name": "qec_list_artifacts",
+              "arguments": "{}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seq": 3,
+      "created": 1791460076.571128,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_list_artifacts",
+        "args": {}
+      }
+    },
+    {
+      "seq": 4,
+      "created": 1791460076.5836368,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_list_artifacts",
+        "result": {
+          "datasets": [],
+          "checkpoints": [],
+          "comparisons": [],
+          "warnings": []
+        }
+      }
+    },
+    {
+      "seq": 5,
+      "created": 1791460099.6788967,
+      "kind": "model",
+      "data": {
+        "content": "Acknowledged \u2014 the artifact listing came back empty: no datasets, checkpoints, or comparisons are currently registered, and there were no warnings.",
+        "role": "assistant"
+      }
+    },
+    {
+      "seq": 6,
+      "created": 1791460099.698595,
+      "kind": "finish",
+      "data": {
+        "provider": "nvidia",
+        "settings": {
+          "base_url": "https://integrate.api.nvidia.com/v1",
+          "model": "deepseek-ai/deepseek-v4.1-flash",
+          "qec_url": "http://127.0.0.1:18000",
+          "max_tokens": 2048
+        },
+        "status": "roundtrip_received",
+        "elapsed_seconds": 49.64000000000033,
+        "completion_attempts": 2,
+        "completion_attempt_log": [
+          {
+            "finish_reason": "tool_calls",
+            "usage": {
+              "prompt_tokens": 319,
+              "completion_tokens": 54,
+              "total_tokens": 373,
+              "prompt_tokens_details": {
+                "cached_tokens": 192
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 26
+              }
+            },
+            "step": 1,
+            "elapsed_seconds": 26.42200000000048
+          },
+          {
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 378,
+              "completion_tokens": 45,
+              "total_tokens": 423,
+              "prompt_tokens_details": {
+                "cached_tokens": 256
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 14
+              }
+            },
+            "step": 2,
+            "elapsed_seconds": 23.07800000000043
+          }
+        ]
+      }
+    }
+  ]
+}

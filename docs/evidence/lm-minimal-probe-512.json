@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "run_id": "09be2ae29d9a4447ba1dae6e0d9eaf4e",
+  "created": 1791363841.5201294,
+  "prompt": "Minimal single-tool Gemma capability probe; at most two completions",
+  "events": [
+    {
+      "seq": 63,
+      "created": 1791363841.5406952,
+      "kind": "provider_settings",
+      "data": {
+        "base_url": "http://127.0.0.1:1234/v1",
+        "model": "google/gemma-4-e2b",
+        "qec_url": "http://127.0.0.1:8000",
+        "max_tokens": 512
+      }
+    },
+    {
+      "seq": 64,
+      "created": 1791363855.3038151,
+      "kind": "model",
+      "data": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "d2rXYHqjc4Q1Kz9juRGLCIlZs3evp71f",
+            "type": "function",
+            "function": {
+              "name": "qec_list_artifacts",
+              "arguments": "{}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seq": 65,
+      "created": 1791363855.3174663,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 66,
+          "completion_tokens": 186,
+          "total_tokens": 252,
+          "completion_tokens_details": {
+            "reasoning_tokens": 170
+          }
+        }
+      }
+    },
+    {
+      "seq": 66,
+      "created": 1791363855.341187,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_list_artifacts",
+        "result": {
+          "datasets": [],
+          "checkpoints": [],
+          "comparisons": [],
+          "warnings": []
+        }
+      }
+    },
+    {
+      "seq": 67,
+      "created": 1791363867.137763,
+      "kind": "model",
+      "data": {
+        "role": "assistant",
+        "content": "{\"datasets\": [], \"checkpoints\": [], \"comparisons\": [], \"warnings\": []}",
+        "tool_calls": []
+      }
+    },
+    {
+      "seq": 68,
+      "created": 1791363867.1583354,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 115,
+          "completion_tokens": 170,
+          "total_tokens": 285,
+          "completion_tokens_details": {
+            "reasoning_tokens": 149
+          }
+        }
+      }
+    },
+    {
+      "seq": 69,
+      "created": 1791363867.170415,
+      "kind": "finish",
+      "data": {
+        "status": "roundtrip_received"
+      }
+    }
+  ]
+}

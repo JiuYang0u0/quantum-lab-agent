@@ -1,0 +1,245 @@
+{
+  "run_id": "571a1f5575744f2e9d86c7b3a63753a6",
+  "task_success": true,
+  "termination_status": "completed",
+  "report_produced": true,
+  "failure_classifications": [
+    "completion_token_limit"
+  ],
+  "tool_errors": [],
+  "dataset_id": "dataset-bfee119b4d854d73b2c8bcb09d7aab2a",
+  "checkpoint_id": "checkpoint-acf02fff0bd54c659aa0183cdd6cf791",
+  "comparison_id": "comparison-760158bcf0354b7980a2b8679f0c9217",
+  "steps": [
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 739,
+        "completion_tokens": 892,
+        "total_tokens": 1631,
+        "completion_tokens_details": {
+          "reasoning_tokens": 826
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 63.125
+    },
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 895,
+        "completion_tokens": 594,
+        "total_tokens": 1489,
+        "completion_tokens_details": {
+          "reasoning_tokens": 535
+        }
+      },
+      "step": 2,
+      "elapsed_seconds": 42.96900000004098
+    },
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1045,
+        "completion_tokens": 406,
+        "total_tokens": 1451,
+        "completion_tokens_details": {
+          "reasoning_tokens": 326
+        }
+      },
+      "step": 3,
+      "elapsed_seconds": 37.625
+    },
+    {
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 3328,
+        "completion_tokens": 1024,
+        "total_tokens": 4352,
+        "completion_tokens_details": {
+          "reasoning_tokens": 652
+        }
+      },
+      "step": 4,
+      "elapsed_seconds": 187.48500000010245
+    }
+  ],
+  "tool_calls": [
+    {
+      "step": 1,
+      "tool": "qec_sample",
+      "args": {
+        "circuit": {
+          "code": "repetition",
+          "distance": 3,
+          "p": 0.03,
+          "rounds": 1,
+          "seed": 42
+        },
+        "sampling": {
+          "test_shots": 32,
+          "train_shots": 64,
+          "validation_shots": 16
+        }
+      }
+    },
+    {
+      "step": 2,
+      "tool": "qec_train",
+      "args": {
+        "dataset_id": "dataset-bfee119b4d854d73b2c8bcb09d7aab2a",
+        "training": {
+          "architecture": "mlp",
+          "epochs": 1
+        }
+      }
+    },
+    {
+      "step": 3,
+      "tool": "qec_compare",
+      "args": {
+        "checkpoint_ids": [
+          "checkpoint-acf02fff0bd54c659aa0183cdd6cf791"
+        ],
+        "dataset_id": "dataset-bfee119b4d854d73b2c8bcb09d7aab2a"
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "step": 1,
+      "id": "job-f045bfd7cd0f45deb93c4b899139baed",
+      "kind": "sample",
+      "status": "succeeded",
+      "artifact_id": "dataset-bfee119b4d854d73b2c8bcb09d7aab2a"
+    },
+    {
+      "step": 2,
+      "id": "job-0e5358b3e58a4729b1bbbd940f4235d1",
+      "kind": "train",
+      "status": "succeeded",
+      "artifact_id": "checkpoint-acf02fff0bd54c659aa0183cdd6cf791"
+    },
+    {
+      "step": 3,
+      "id": "job-6412055a658a444c910a08cf09f510ac",
+      "kind": "compare",
+      "status": "succeeded",
+      "artifact_id": "comparison-760158bcf0354b7980a2b8679f0c9217"
+    }
+  ],
+  "numeric_provenance": [
+    {
+      "decoder": "mwpm",
+      "checkpoint_id": null,
+      "prediction_key": "prediction_0",
+      "shots": 32,
+      "errors": 0,
+      "logical_error_rate": 0.0,
+      "ci": [
+        0.0,
+        0.1071827150573635
+      ],
+      "setup_seconds": 0.00020560016855597496,
+      "warmup_seconds": 2.600019797682762e-06,
+      "inference_seconds": [
+        0.0003011999651789665
+      ],
+      "end_to_end_seconds": [
+        0.000314400065690279
+      ],
+      "decode_seconds": 0.000314400065690279,
+      "microseconds_per_shot": 9.825002052821219,
+      "unseen_fraction": null,
+      "threads": 1,
+      "device": "cpu",
+      "train_noise": null,
+      "test_noise": {
+        "after_clifford_depolarization": 0.03,
+        "before_round_data_depolarization": 0.03,
+        "before_measure_flip_probability": 0.03,
+        "after_reset_flip_probability": 0.03
+      },
+      "source": "comparison-760158bcf0354b7980a2b8679f0c9217#prediction_0",
+      "dataset_id": "dataset-bfee119b4d854d73b2c8bcb09d7aab2a"
+    },
+    {
+      "decoder": "lookup",
+      "checkpoint_id": null,
+      "prediction_key": "prediction_1",
+      "shots": 32,
+      "errors": 0,
+      "logical_error_rate": 0.0,
+      "ci": [
+        0.0,
+        0.1071827150573635
+      ],
+      "setup_seconds": 0.0001460001803934574,
+      "warmup_seconds": 1.4998950064182281e-06,
+      "inference_seconds": [
+        3.42000275850296e-05
+      ],
+      "end_to_end_seconds": [
+        4.409998655319214e-05
+      ],
+      "decode_seconds": 4.409998655319214e-05,
+      "microseconds_per_shot": 1.3781245797872543,
+      "unseen_fraction": 0.0,
+      "threads": 1,
+      "device": "cpu",
+      "train_noise": {
+        "after_clifford_depolarization": 0.03,
+        "before_round_data_depolarization": 0.03,
+        "before_measure_flip_probability": 0.03,
+        "after_reset_flip_probability": 0.03
+      },
+      "test_noise": {
+        "after_clifford_depolarization": 0.03,
+        "before_round_data_depolarization": 0.03,
+        "before_measure_flip_probability": 0.03,
+        "after_reset_flip_probability": 0.03
+      },
+      "source": "comparison-760158bcf0354b7980a2b8679f0c9217#prediction_1",
+      "dataset_id": "dataset-bfee119b4d854d73b2c8bcb09d7aab2a"
+    },
+    {
+      "decoder": "mlp",
+      "checkpoint_id": "checkpoint-acf02fff0bd54c659aa0183cdd6cf791",
+      "prediction_key": "prediction_2",
+      "shots": 32,
+      "errors": 3,
+      "logical_error_rate": 0.09375,
+      "ci": [
+        0.032400962626319516,
+        0.24218499335778831
+      ],
+      "setup_seconds": 0.013273600023239851,
+      "warmup_seconds": 2.100132405757904e-06,
+      "inference_seconds": [
+        0.0002101000864058733
+      ],
+      "end_to_end_seconds": [
+        0.0005232000257819891
+      ],
+      "decode_seconds": 0.0005232000257819891,
+      "microseconds_per_shot": 16.35000080568716,
+      "unseen_fraction": null,
+      "threads": 1,
+      "device": "cpu",
+      "train_noise": {
+        "after_clifford_depolarization": 0.03,
+        "before_round_data_depolarization": 0.03,
+        "before_measure_flip_probability": 0.03,
+        "after_reset_flip_probability": 0.03
+      },
+      "test_noise": {
+        "after_clifford_depolarization": 0.03,
+        "before_round_data_depolarization": 0.03,
+        "before_measure_flip_probability": 0.03,
+        "after_reset_flip_probability": 0.03
+      },
+      "source": "comparison-760158bcf0354b7980a2b8679f0c9217#prediction_2",
+      "dataset_id": "dataset-bfee119b4d854d73b2c8bcb09d7aab2a"
+    }
+  ]
+}

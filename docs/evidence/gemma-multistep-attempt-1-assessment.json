@@ -1,0 +1,57 @@
+{
+  "run_id": "ce1710916ce644fe8fee2b3744c212ce",
+  "task_success": false,
+  "termination_status": "completed_with_errors",
+  "report_produced": false,
+  "failure_classifications": [
+    "tool_or_evidence_error",
+    "incomplete_or_invalid_artifact_chain",
+    "no_grounded_report"
+  ],
+  "tool_errors": [
+    "Invalid arguments or tool response"
+  ],
+  "dataset_id": null,
+  "checkpoint_id": null,
+  "comparison_id": null,
+  "steps": [
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 513,
+        "completion_tokens": 953,
+        "total_tokens": 1466,
+        "completion_tokens_details": {
+          "reasoning_tokens": 887
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 69.875
+    },
+    {
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 601,
+        "completion_tokens": 780,
+        "total_tokens": 1381,
+        "completion_tokens_details": {
+          "reasoning_tokens": 720
+        }
+      },
+      "step": 2,
+      "elapsed_seconds": 119.25
+    }
+  ],
+  "tool_calls": [
+    {
+      "step": 1,
+      "tool": "qec_sample",
+      "args": {
+        "circuit": "repetition code distance 3, rounds 1, p 0.03, seed 42",
+        "sampling": "train_shots=64, validation_shots=16, test_shots=32"
+      }
+    }
+  ],
+  "jobs": [],
+  "numeric_provenance": []
+}

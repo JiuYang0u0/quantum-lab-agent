@@ -1,0 +1,315 @@
+{
+  "cases": [
+    {
+      "case": "bell_ideal",
+      "task_success": true,
+      "stop_reason": "completed",
+      "termination_source": "model",
+      "criteria": {
+        "native_calls": true,
+        "no_tool_errors": true,
+        "one_read_report": true,
+        "saved_report_matches": true,
+        "target": true,
+        "report_target": true,
+        "parameters": true,
+        "bound_ordered_chain": true,
+        "ideal_target_verified": true,
+        "independent_density": true,
+        "fidelity": true,
+        "counts": true,
+        "grounded_report": true
+      },
+      "failures": [],
+      "measurements": {
+        "circuit_id": "e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c",
+        "result_id": "e99b3f6a79bed86cdb967d734b7e8827ffc89a6dc7d7c347dc83138ed521ef1c",
+        "ideal_target_fidelity": 0.9999999999999997,
+        "expected_fidelity": 0.9999999999999997,
+        "reported_fidelity": 1.0,
+        "density_matrix_fidelity": 1.0,
+        "counts": {
+          "00": 527,
+          "11": 497
+        },
+        "expected_probabilities": {
+          "00": 0.4999999999999999,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.4999999999999999
+        },
+        "config": {
+          "circuit_id": "e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c",
+          "mode": "ideal",
+          "noise": {
+            "depolarizing_1q": 0.0,
+            "depolarizing_2q": 0.0,
+            "readout": 0.0
+          },
+          "seed": 7,
+          "shots": 1024
+        },
+        "versions": {
+          "numpy": "2.5.3",
+          "qiskit": "2.5.2",
+          "qiskit-aer": "0.17.2"
+        },
+        "independent_method": "NumPy density evolution; Qiskit gate matrices; Pauli twirl (no Aer)",
+        "caveat": "Ideal target verification is build correctness; noisy fidelity is a separate metric. Counts have sampling uncertainty."
+      },
+      "completion_attempts": 4,
+      "completion_attempt_log": [
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 1568,
+            "completion_tokens": 89,
+            "total_tokens": 1657,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "step": 1,
+          "elapsed_seconds": 10.688000000000102
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 1889,
+            "completion_tokens": 248,
+            "total_tokens": 2137,
+            "prompt_tokens_details": {
+              "cached_tokens": 1536
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 6
+            }
+          },
+          "step": 2,
+          "elapsed_seconds": 9.859000000000378
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 2934,
+            "completion_tokens": 80,
+            "total_tokens": 3014,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "step": 3,
+          "elapsed_seconds": 17.359999999998763
+        },
+        {
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 3883,
+            "completion_tokens": 567,
+            "total_tokens": 4450,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3
+            }
+          },
+          "step": 4,
+          "elapsed_seconds": 32.23500000000058
+        }
+      ],
+      "elapsed_seconds": 70.53100000000086,
+      "tools_used": 4,
+      "settings": {
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "model": "deepseek-ai/deepseek-v4.1-flash",
+        "qec_url": "http://127.0.0.1:8000",
+        "max_tokens": 2048
+      },
+      "source_revision": "bef904ebcfb337fd73df9ab6df35b09469242a0e",
+      "limits": {
+        "completions": 5,
+        "tools": 6,
+        "seconds": 300,
+        "retries": 0,
+        "interpretation_requests": 0
+      }
+    },
+    {
+      "case": "ghz3_gate_noise",
+      "task_success": true,
+      "stop_reason": "completed",
+      "termination_source": "model",
+      "criteria": {
+        "native_calls": true,
+        "no_tool_errors": true,
+        "one_read_report": true,
+        "saved_report_matches": true,
+        "target": true,
+        "report_target": true,
+        "parameters": true,
+        "bound_ordered_chain": true,
+        "ideal_target_verified": true,
+        "independent_density": true,
+        "fidelity": true,
+        "counts": true,
+        "grounded_report": true
+      },
+      "failures": [],
+      "measurements": {
+        "circuit_id": "eb5dbca045625e9ba162058ccd95047c9014a6c34379ab6ef08ee8ebf8f75c7c",
+        "result_id": "28762693f670f773b89c8a58cd2c6c2f1811d78c3482194801919a432cfaaa09",
+        "ideal_target_fidelity": 0.9999999999999997,
+        "expected_fidelity": 0.9269839999999995,
+        "reported_fidelity": 0.9269840000000001,
+        "density_matrix_fidelity": 0.9269840000000001,
+        "counts": {
+          "000": 511,
+          "001": 4,
+          "010": 7,
+          "011": 5,
+          "100": 5,
+          "101": 21,
+          "110": 6,
+          "111": 465
+        },
+        "expected_probabilities": {
+          "000": 0.4753999999999999,
+          "001": 0.004999999999999999,
+          "010": 0.014599999999999997,
+          "011": 0.004999999999999999,
+          "100": 0.004999999999999999,
+          "101": 0.014599999999999997,
+          "110": 0.004999999999999999,
+          "111": 0.4753999999999999
+        },
+        "config": {
+          "circuit_id": "eb5dbca045625e9ba162058ccd95047c9014a6c34379ab6ef08ee8ebf8f75c7c",
+          "mode": "noisy",
+          "noise": {
+            "depolarizing_1q": 0.02,
+            "depolarizing_2q": 0.04,
+            "readout": 0.0
+          },
+          "seed": 7,
+          "shots": 1024
+        },
+        "versions": {
+          "numpy": "2.5.3",
+          "qiskit": "2.5.2",
+          "qiskit-aer": "0.17.2"
+        },
+        "independent_method": "NumPy density evolution; Qiskit gate matrices; Pauli twirl (no Aer)",
+        "caveat": "Ideal target verification is build correctness; noisy fidelity is a separate metric. Counts have sampling uncertainty."
+      },
+      "completion_attempts": 5,
+      "completion_attempt_log": [
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 1570,
+            "completion_tokens": 251,
+            "total_tokens": 1821,
+            "prompt_tokens_details": {
+              "cached_tokens": 1344
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 100
+            }
+          },
+          "step": 1,
+          "elapsed_seconds": 17.360000000000582
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 2014,
+            "completion_tokens": 122,
+            "total_tokens": 2136,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 26
+            }
+          },
+          "step": 2,
+          "elapsed_seconds": 17.15600000000086
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 2197,
+            "completion_tokens": 190,
+            "total_tokens": 2387,
+            "prompt_tokens_details": {
+              "cached_tokens": 1536
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 5
+            }
+          },
+          "step": 3,
+          "elapsed_seconds": 33.10999999999876
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 3643,
+            "completion_tokens": 91,
+            "total_tokens": 3734,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 5
+            }
+          },
+          "step": 4,
+          "elapsed_seconds": 43.60999999999876
+        },
+        {
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 5172,
+            "completion_tokens": 577,
+            "total_tokens": 5749,
+            "prompt_tokens_details": {
+              "cached_tokens": 3584
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 5
+            }
+          },
+          "step": 5,
+          "elapsed_seconds": 52.67200000000048
+        }
+      ],
+      "elapsed_seconds": 164.40600000000086,
+      "tools_used": 4,
+      "settings": {
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "model": "deepseek-ai/deepseek-v4.1-flash",
+        "qec_url": "http://127.0.0.1:8000",
+        "max_tokens": 2048
+      },
+      "source_revision": "bef904ebcfb337fd73df9ab6df35b09469242a0e",
+      "limits": {
+        "completions": 5,
+        "tools": 6,
+        "seconds": 300,
+        "retries": 0,
+        "interpretation_requests": 0
+      }
+    }
+  ],
+  "completion_attempts": 9,
+  "max_completions": 10,
+  "task_success": true
+}

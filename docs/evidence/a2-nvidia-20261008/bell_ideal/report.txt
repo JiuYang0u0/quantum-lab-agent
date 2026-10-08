@@ -1,0 +1,17 @@
+{"result": {"artifact_id": "e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c", "bit_order": "q[n-1]...q[0]; q0 least significant", "kind": "quantum_circuit", "schema_version": 1, "spec": {"gates": null, "preset": "bell", "qubits": 2, "target": "bell"}, "target_definition": "independent analytic vector: (|0...0> + |1...1>)/sqrt(2)", "threshold": 0.999999, "verification": {"ideal_premeasurement_fidelity": 0.9999999999999996, "status": "verified", "threshold": 0.999999}, "versions": {"numpy": "2.5.3", "qiskit": "2.5.2", "qiskit-aer": "0.17.2"}}, "tool": "build_circuit"}
+
+{"result": {"circuit_id": "e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c", "ideal_premeasurement_fidelity": 0.9999999999999996, "status": "verified", "threshold": 0.999999}, "tool": "verify"}
+
+Quantum simulation [e99b3f6a79bed86cdb967d734b7e8827ffc89a6dc7d7c347dc83138ed521ef1c]
+Circuit [e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c] target=bell
+Ideal verification: verified
+Premeasurement fidelity: 1
+Counts (1024 shots): {'00': 527, '11': 497}
+Fidelity is computed from the premeasurement density matrix, not inferred from counts.
+
+Quantum simulation [e99b3f6a79bed86cdb967d734b7e8827ffc89a6dc7d7c347dc83138ed521ef1c]
+Circuit [e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c] target=bell
+Ideal verification: verified
+Premeasurement fidelity: 1
+Counts (1024 shots): {'00': 527, '11': 497}
+Fidelity is computed from the premeasurement density matrix, not inferred from counts.

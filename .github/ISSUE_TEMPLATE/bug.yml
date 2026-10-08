@@ -1,0 +1,20 @@
+name: Bug report
+description: Reproduce a runtime or UI defect without secrets.
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach .env, keys, raw SQLite, or private traces. For sensitive findings follow SECURITY.md."
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Commit, OS, Python/uv/Node versions, fixture or live, tool family.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction and expected versus actual behavior
+      description: Include sanitized commands, limits, and status; no credentials.
+    validations:
+      required: true

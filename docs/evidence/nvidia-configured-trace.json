@@ -1,0 +1,1108 @@
+{
+  "schema_version": 1,
+  "run_id": "79bf8d4f0f174bad85bb0c74fa532d04",
+  "created": 1791460099.751853,
+  "prompt": "Run a tiny QEC experiment: sample a repetition code distance 3, rounds 1, p 0.03, seed 42 with train_shots 64, validation_shots 16, test_shots 32. Train an mlp for 1 epoch on the returned dataset using remaining CPU defaults. Compare that same dataset using the returned checkpoint against MWPM and lookup. Use only artifact IDs returned by your tools. Produce a grounded report with errors/shots, LER, CI, decode seconds and artifact citations, then stop. The compare tool already returns the report; no need to list artifacts.",
+  "events": [
+    {
+      "seq": 1,
+      "created": 1791460099.7596042,
+      "kind": "experiment",
+      "data": {
+        "limits": {
+          "max_steps": 6,
+          "max_tools": 4,
+          "seconds": 900.0
+        },
+        "finalization": {
+          "reports": 1,
+          "interpret": false,
+          "interpretation_tokens": 128,
+          "interpretation_seconds": 15
+        }
+      }
+    },
+    {
+      "seq": 2,
+      "created": 1791460099.7669046,
+      "kind": "provider_settings",
+      "data": {
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "model": "deepseek-ai/deepseek-v4.1-flash",
+        "qec_url": "http://127.0.0.1:18000",
+        "max_tokens": 2048
+      }
+    },
+    {
+      "seq": 3,
+      "created": 1791460116.497567,
+      "kind": "model",
+      "data": {
+        "content": "I'll start by sampling the dataset with the specified parameters.\n\n",
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-b2c018bd0d6ae5fd",
+            "type": "function",
+            "function": {
+              "name": "qec_sample",
+              "arguments": "{\"circuit\": {\"code\": \"repetition\", \"distance\": 3, \"rounds\": 1, \"p\": 0.03, \"seed\": 42}, \"sampling\": {\"train_shots\": 64, \"validation_shots\": 16, \"test_shots\": 32}}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seq": 4,
+      "created": 1791460116.508081,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 1766,
+          "completion_tokens": 132,
+          "total_tokens": 1898,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8
+          }
+        },
+        "step": 1,
+        "elapsed_seconds": 16.717999999999847
+      }
+    },
+    {
+      "seq": 5,
+      "created": 1791460116.5187962,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_sample",
+        "args": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        }
+      }
+    },
+    {
+      "seq": 6,
+      "created": 1791460116.5405266,
+      "kind": "intent",
+      "data": {
+        "intent_id": "821910c78d6bcad5469ffce385c3c648556e24bceb3860b08cbafb7d914b5b6e",
+        "tool": "qec_sample",
+        "args": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        }
+      }
+    },
+    {
+      "seq": 7,
+      "created": 1791460116.5872657,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 8,
+      "created": 1791460116.8507845,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 9,
+      "created": 1791460117.1232715,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 10,
+      "created": 1791460117.3901563,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 11,
+      "created": 1791460117.6562867,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 12,
+      "created": 1791460117.9076278,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 13,
+      "created": 1791460118.1726806,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 14,
+      "created": 1791460118.4362593,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 15,
+      "created": 1791460118.702415,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:36.559236+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 16,
+      "created": 1791460118.9675894,
+      "kind": "job",
+      "data": {
+        "id": "job-50c342ee3f33433086d55f3108e7381f",
+        "kind": "sample",
+        "status": "succeeded",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-08T11:48:36.556547+00:00",
+        "updated_at": "2026-10-08T11:48:38.838882+00:00",
+        "artifact_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+        "error": null
+      }
+    },
+    {
+      "seq": 17,
+      "created": 1791460118.977798,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_sample",
+        "result": {
+          "job_id": "job-50c342ee3f33433086d55f3108e7381f",
+          "artifact_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "status": "succeeded"
+        }
+      }
+    },
+    {
+      "seq": 18,
+      "created": 1791460132.9879289,
+      "kind": "model",
+      "data": {
+        "content": "Dataset created. Now training the MLP decoder.\n\n",
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-92b2537dcc2e1df4",
+            "type": "function",
+            "function": {
+              "name": "qec_train",
+              "arguments": "{\"dataset_id\": \"dataset-e90420d6632542c1b99b43476b717dd8\", \"training\": {\"architecture\": \"mlp\", \"epochs\": 1}}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seq": 19,
+      "created": 1791460132.9963937,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 1959,
+          "completion_tokens": 106,
+          "total_tokens": 2065,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 10
+          }
+        },
+        "step": 2,
+        "elapsed_seconds": 14.0
+      }
+    },
+    {
+      "seq": 20,
+      "created": 1791460133.0037425,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_train",
+        "args": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "architecture": "mlp",
+            "epochs": 1
+          }
+        }
+      }
+    },
+    {
+      "seq": 21,
+      "created": 1791460133.018609,
+      "kind": "intent",
+      "data": {
+        "intent_id": "df0eecd7b6152319c2178c92c4eb83a5144c102b4bba446702953478e37d626a",
+        "tool": "qec_train",
+        "args": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "hidden_size": 8,
+            "learning_rate": 0.001,
+            "seed": 123,
+            "device": "cpu",
+            "threads": 1
+          }
+        }
+      }
+    },
+    {
+      "seq": 22,
+      "created": 1791460133.0602896,
+      "kind": "job",
+      "data": {
+        "id": "job-da7a55aef5784606ac6038a5f9547657",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-08T11:48:53.045951+00:00",
+        "updated_at": "2026-10-08T11:48:53.046957+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 23,
+      "created": 1791460133.3367305,
+      "kind": "job",
+      "data": {
+        "id": "job-da7a55aef5784606ac6038a5f9547657",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-08T11:48:53.045951+00:00",
+        "updated_at": "2026-10-08T11:48:53.046957+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 24,
+      "created": 1791460133.6006255,
+      "kind": "job",
+      "data": {
+        "id": "job-da7a55aef5784606ac6038a5f9547657",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-08T11:48:53.045951+00:00",
+        "updated_at": "2026-10-08T11:48:53.046957+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 25,
+      "created": 1791460133.8646286,
+      "kind": "job",
+      "data": {
+        "id": "job-da7a55aef5784606ac6038a5f9547657",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-08T11:48:53.045951+00:00",
+        "updated_at": "2026-10-08T11:48:53.046957+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 26,
+      "created": 1791460134.128758,
+      "kind": "job",
+      "data": {
+        "id": "job-da7a55aef5784606ac6038a5f9547657",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-08T11:48:53.045951+00:00",
+        "updated_at": "2026-10-08T11:48:53.046957+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 27,
+      "created": 1791460134.396733,
+      "kind": "job",
+      "data": {
+        "id": "job-da7a55aef5784606ac6038a5f9547657",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-08T11:48:53.045951+00:00",
+        "updated_at": "2026-10-08T11:48:53.046957+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 28,
+      "created": 1791460134.6609232,
+      "kind": "job",
+      "data": {
+        "id": "job-da7a55aef5784606ac6038a5f9547657",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-08T11:48:53.045951+00:00",
+        "updated_at": "2026-10-08T11:48:53.046957+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 29,
+      "created": 1791460134.928177,
+      "kind": "job",
+      "data": {
+        "id": "job-da7a55aef5784606ac6038a5f9547657",
+        "kind": "train",
+        "status": "succeeded",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-08T11:48:53.045951+00:00",
+        "updated_at": "2026-10-08T11:48:54.829389+00:00",
+        "artifact_id": "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8",
+        "error": null
+      }
+    },
+    {
+      "seq": 30,
+      "created": 1791460134.936977,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_train",
+        "result": {
+          "job_id": "job-da7a55aef5784606ac6038a5f9547657",
+          "artifact_id": "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8",
+          "status": "succeeded"
+        }
+      }
+    },
+    {
+      "seq": 31,
+      "created": 1791460146.7730584,
+      "kind": "model",
+      "data": {
+        "content": "Checkpoint created. Now comparing against MWPM and lookup.\n\n",
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-9bdbbd5e3f0f3b2a",
+            "type": "function",
+            "function": {
+              "name": "qec_compare",
+              "arguments": "{\"dataset_id\": \"dataset-e90420d6632542c1b99b43476b717dd8\", \"checkpoint_ids\": [\"checkpoint-839667acfaa94277a1b9ab3f0f1da3c8\"]}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seq": 32,
+      "created": 1791460146.782194,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 2128,
+          "completion_tokens": 117,
+          "total_tokens": 2245,
+          "prompt_tokens_details": {
+            "cached_tokens": 1920
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3
+          }
+        },
+        "step": 3,
+        "elapsed_seconds": 11.82800000000043
+      }
+    },
+    {
+      "seq": 33,
+      "created": 1791460146.7901971,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_compare",
+        "args": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "checkpoint_ids": [
+            "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8"
+          ]
+        }
+      }
+    },
+    {
+      "seq": 34,
+      "created": 1791460146.80369,
+      "kind": "intent",
+      "data": {
+        "intent_id": "c9debd46380892196502c1f1cfcfc0d0b8feae5e5a17ca01faf2bea78a25b5ff",
+        "tool": "qec_compare",
+        "args": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "checkpoint_ids": [
+            "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8"
+          ],
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "device": "cpu",
+            "threads": 1
+          },
+          "allow_cross_p": false
+        }
+      }
+    },
+    {
+      "seq": 35,
+      "created": 1791460146.8428307,
+      "kind": "job",
+      "data": {
+        "id": "job-a7e5b0fd05484889ada87967ed7ab53c",
+        "kind": "compare",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "checkpoint_ids": [
+            "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8"
+          ],
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "threads": 1,
+            "device": "cpu"
+          },
+          "allow_cross_p": false
+        },
+        "created_at": "2026-10-08T11:49:06.828693+00:00",
+        "updated_at": "2026-10-08T11:49:06.829856+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 36,
+      "created": 1791460147.1032565,
+      "kind": "job",
+      "data": {
+        "id": "job-a7e5b0fd05484889ada87967ed7ab53c",
+        "kind": "compare",
+        "status": "succeeded",
+        "request": {
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "checkpoint_ids": [
+            "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8"
+          ],
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "threads": 1,
+            "device": "cpu"
+          },
+          "allow_cross_p": false
+        },
+        "created_at": "2026-10-08T11:49:06.828693+00:00",
+        "updated_at": "2026-10-08T11:49:06.867876+00:00",
+        "artifact_id": "comparison-a544c324a208420a8a19b226336bbad0",
+        "error": null
+      }
+    },
+    {
+      "seq": 37,
+      "created": 1791460147.1446047,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_compare",
+        "result": {
+          "schema_version": 2,
+          "artifact_id": "comparison-a544c324a208420a8a19b226336bbad0",
+          "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+          "config": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+          "identity": {
+            "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+            "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+            "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+            "num_detectors": 4,
+            "num_observables": 1
+          },
+          "seeds": {
+            "train": 16138347438539916964,
+            "validation": 134183728835869882,
+            "test": 11601846009883706861
+          },
+          "test_digest": "a430fb5c8124326d8a548a7ed0a2adc8d9e48a51c30c0692f9a72594b091340f",
+          "predictions_hash": "084499405a2b1c011661b9531a734bf8dca175c12a2bd5f5929623c7a2058c73",
+          "sampling_seconds": 0.002445399999487563,
+          "benchmark": {
+            "warmup": 0,
+            "repeats": 1,
+            "batch_size": 32,
+            "threads": 1,
+            "device": "cpu"
+          },
+          "allow_cross_p": false,
+          "results": [
+            {
+              "decoder": "mwpm",
+              "checkpoint_id": null,
+              "prediction_key": "prediction_0",
+              "shots": 32,
+              "errors": 0,
+              "logical_error_rate": 0.0,
+              "ci": [
+                0.0,
+                0.1071827150573635
+              ],
+              "setup_seconds": 0.00338850000025559,
+              "warmup_seconds": 5.300000339047983e-06,
+              "inference_seconds": [
+                0.000246099999458238
+              ],
+              "end_to_end_seconds": [
+                0.00026280000020051375
+              ],
+              "decode_seconds": 0.00026280000020051375,
+              "microseconds_per_shot": 8.212500006266055,
+              "unseen_fraction": null,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": null,
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            },
+            {
+              "decoder": "lookup",
+              "checkpoint_id": null,
+              "prediction_key": "prediction_1",
+              "shots": 32,
+              "errors": 0,
+              "logical_error_rate": 0.0,
+              "ci": [
+                0.0,
+                0.1071827150573635
+              ],
+              "setup_seconds": 0.0004315000005590264,
+              "warmup_seconds": 1.600000359758269e-06,
+              "inference_seconds": [
+                2.2700000045006163e-05
+              ],
+              "end_to_end_seconds": [
+                3.319999996165279e-05
+              ],
+              "decode_seconds": 3.319999996165279e-05,
+              "microseconds_per_shot": 1.0374999988016498,
+              "unseen_fraction": 0.0,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              },
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            },
+            {
+              "decoder": "mlp",
+              "checkpoint_id": "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8",
+              "prediction_key": "prediction_2",
+              "shots": 32,
+              "errors": 3,
+              "logical_error_rate": 0.09375,
+              "ci": [
+                0.032400962626319516,
+                0.24218499335778831
+              ],
+              "setup_seconds": 0.014081799999985378,
+              "warmup_seconds": 1.4000006558489986e-06,
+              "inference_seconds": [
+                0.00010729999939940171
+              ],
+              "end_to_end_seconds": [
+                0.0008428000001003966
+              ],
+              "decode_seconds": 0.0008428000001003966,
+              "microseconds_per_shot": 26.337500003137393,
+              "unseen_fraction": null,
+              "threads": 1,
+              "device": "cpu",
+              "train_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              },
+              "test_noise": {
+                "after_clifford_depolarization": 0.03,
+                "before_round_data_depolarization": 0.03,
+                "before_measure_flip_probability": 0.03,
+                "after_reset_flip_probability": 0.03
+              }
+            }
+          ],
+          "paired": [
+            {
+              "a": "prediction_0",
+              "b": "prediction_1",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 0,
+              "both_wrong": 0,
+              "both_correct": 32
+            },
+            {
+              "a": "prediction_0",
+              "b": "prediction_2",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 3,
+              "both_wrong": 0,
+              "both_correct": 29
+            },
+            {
+              "a": "prediction_1",
+              "b": "prediction_2",
+              "a_wrong_b_correct": 0,
+              "a_correct_b_wrong": 3,
+              "both_wrong": 0,
+              "both_correct": 29
+            }
+          ],
+          "interpretation": "Fixed-shot evaluation; small runs are smoke tests, not superiority evidence.",
+          "timing": "Wall seconds, CUDA synchronized. Setup=fit/load; warmup separate. Inference=batched forward/decode only; end-to-end=encoding/transfers/forward/assembly per repeat, excluding fit/load/warmup. decode_seconds=median end-to-end."
+        }
+      }
+    },
+    {
+      "seq": 38,
+      "created": 1791460147.152484,
+      "kind": "finish",
+      "data": {
+        "status": "report_ready",
+        "tools_used": 3,
+        "task_completion": "verified_report_goal",
+        "termination_source": "policy"
+      }
+    },
+    {
+      "seq": 39,
+      "created": 1791460147.1609275,
+      "kind": "report_ready",
+      "data": {
+        "artifact_ids": [
+          "comparison-a544c324a208420a8a19b226336bbad0"
+        ]
+      }
+    }
+  ]
+}

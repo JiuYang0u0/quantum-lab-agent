@@ -1,0 +1,46 @@
+{
+  "provider": "nvidia",
+  "settings": {
+    "base_url": "https://integrate.api.nvidia.com/v1",
+    "model": "deepseek-ai/deepseek-v4.1-flash",
+    "qec_url": "http://127.0.0.1:18000",
+    "max_tokens": 2048
+  },
+  "status": "roundtrip_received",
+  "elapsed_seconds": 49.64000000000033,
+  "completion_attempts": 2,
+  "completion_attempt_log": [
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 319,
+        "completion_tokens": 54,
+        "total_tokens": 373,
+        "prompt_tokens_details": {
+          "cached_tokens": 192
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 26.42200000000048
+    },
+    {
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 378,
+        "completion_tokens": 45,
+        "total_tokens": 423,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 14
+        }
+      },
+      "step": 2,
+      "elapsed_seconds": 23.07800000000043
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+name: Scientific reproduction
+description: Report a mismatch in scientific evidence or evaluation.
+body:
+  - type: textarea
+    id: contract
+    attributes:
+      label: Scientific contract and provenance
+      description: Commit, evaluator version, fixture/live/local simulation, evidence path, OS/package versions, seeds/noise/shots, and external B version if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: mismatch
+    attributes:
+      label: Expected versus observed result
+      description: Include independent calculation and sanitized artifact IDs/hashes. Distinguish counts, fidelity, task success, and termination. Preserve original evidence; do not upload secrets or raw state.
+    validations:
+      required: true

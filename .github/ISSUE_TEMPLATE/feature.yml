@@ -1,0 +1,15 @@
+name: Feature request
+description: Describe a concrete research or usability need.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Problem and proposed outcome
+      description: Explain the workflow and how success could be checked.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and alternatives
+      description: Consider local-only operation, bounded tools, cost, scientific validity, and compatibility.

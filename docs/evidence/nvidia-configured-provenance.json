@@ -1,0 +1,354 @@
+{
+  "artifact_root": "C:\\Users\\PUBLIC_USER\\AppData\\Local\\Temp\\opencode\\qla-b-2rdzoqjh\\artifacts",
+  "metadata": {
+    "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8\\checkpoint.json": {
+      "schema_version": 2,
+      "artifact_id": "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8",
+      "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+      "circuit_config": {
+        "code": "repetition",
+        "distance": 3,
+        "rounds": 1,
+        "p": 0.03,
+        "after_clifford_depolarization": null,
+        "before_round_data_depolarization": null,
+        "before_measure_flip_probability": null,
+        "after_reset_flip_probability": null,
+        "seed": 42
+      },
+      "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+      "identity": {
+        "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+        "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+        "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+        "num_detectors": 4,
+        "num_observables": 1
+      },
+      "train_config": {
+        "device": "cpu",
+        "architecture": "mlp",
+        "epochs": 1,
+        "patience": 1,
+        "batch_size": 32,
+        "learning_rate": 0.001,
+        "hidden_size": 8,
+        "seed": 123,
+        "threads": 1
+      },
+      "best_epoch": 1,
+      "selection_metric": "validation_bce",
+      "best_validation_bce": 0.659074068069458,
+      "history": [
+        {
+          "epoch": 1,
+          "train_bce": 0.6540658175945282,
+          "validation_bce": 0.659074068069458
+        }
+      ],
+      "train_seconds": 1.7298325000001569,
+      "torch_version": "2.14.1+cpu",
+      "stim_version": "1.16.0",
+      "dataset_samples_hash": "9cf7db88ab4f77251c34fde6fb21eada85f3bbd9198a5ce1d4e4551f725c66a4",
+      "weights_hash": "485a652d065767f80553d7818bd20f4a9d14235b7b056db3b4758dccb06f295f"
+    },
+    "comparison-a544c324a208420a8a19b226336bbad0\\report.json": {
+      "schema_version": 2,
+      "artifact_id": "comparison-a544c324a208420a8a19b226336bbad0",
+      "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+      "config": {
+        "code": "repetition",
+        "distance": 3,
+        "rounds": 1,
+        "p": 0.03,
+        "after_clifford_depolarization": null,
+        "before_round_data_depolarization": null,
+        "before_measure_flip_probability": null,
+        "after_reset_flip_probability": null,
+        "seed": 42
+      },
+      "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+      "identity": {
+        "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+        "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+        "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+        "num_detectors": 4,
+        "num_observables": 1
+      },
+      "seeds": {
+        "train": 16138347438539916964,
+        "validation": 134183728835869882,
+        "test": 11601846009883706861
+      },
+      "test_digest": "a430fb5c8124326d8a548a7ed0a2adc8d9e48a51c30c0692f9a72594b091340f",
+      "predictions_hash": "084499405a2b1c011661b9531a734bf8dca175c12a2bd5f5929623c7a2058c73",
+      "sampling_seconds": 0.002445399999487563,
+      "benchmark": {
+        "warmup": 0,
+        "repeats": 1,
+        "batch_size": 32,
+        "threads": 1,
+        "device": "cpu"
+      },
+      "allow_cross_p": false,
+      "results": [
+        {
+          "decoder": "mwpm",
+          "checkpoint_id": null,
+          "prediction_key": "prediction_0",
+          "shots": 32,
+          "errors": 0,
+          "logical_error_rate": 0.0,
+          "ci": [
+            0.0,
+            0.1071827150573635
+          ],
+          "setup_seconds": 0.00338850000025559,
+          "warmup_seconds": 5.300000339047983e-06,
+          "inference_seconds": [
+            0.000246099999458238
+          ],
+          "end_to_end_seconds": [
+            0.00026280000020051375
+          ],
+          "decode_seconds": 0.00026280000020051375,
+          "microseconds_per_shot": 8.212500006266055,
+          "unseen_fraction": null,
+          "threads": 1,
+          "device": "cpu",
+          "train_noise": null,
+          "test_noise": {
+            "after_clifford_depolarization": 0.03,
+            "before_round_data_depolarization": 0.03,
+            "before_measure_flip_probability": 0.03,
+            "after_reset_flip_probability": 0.03
+          }
+        },
+        {
+          "decoder": "lookup",
+          "checkpoint_id": null,
+          "prediction_key": "prediction_1",
+          "shots": 32,
+          "errors": 0,
+          "logical_error_rate": 0.0,
+          "ci": [
+            0.0,
+            0.1071827150573635
+          ],
+          "setup_seconds": 0.0004315000005590264,
+          "warmup_seconds": 1.600000359758269e-06,
+          "inference_seconds": [
+            2.2700000045006163e-05
+          ],
+          "end_to_end_seconds": [
+            3.319999996165279e-05
+          ],
+          "decode_seconds": 3.319999996165279e-05,
+          "microseconds_per_shot": 1.0374999988016498,
+          "unseen_fraction": 0.0,
+          "threads": 1,
+          "device": "cpu",
+          "train_noise": {
+            "after_clifford_depolarization": 0.03,
+            "before_round_data_depolarization": 0.03,
+            "before_measure_flip_probability": 0.03,
+            "after_reset_flip_probability": 0.03
+          },
+          "test_noise": {
+            "after_clifford_depolarization": 0.03,
+            "before_round_data_depolarization": 0.03,
+            "before_measure_flip_probability": 0.03,
+            "after_reset_flip_probability": 0.03
+          }
+        },
+        {
+          "decoder": "mlp",
+          "checkpoint_id": "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8",
+          "prediction_key": "prediction_2",
+          "shots": 32,
+          "errors": 3,
+          "logical_error_rate": 0.09375,
+          "ci": [
+            0.032400962626319516,
+            0.24218499335778831
+          ],
+          "setup_seconds": 0.014081799999985378,
+          "warmup_seconds": 1.4000006558489986e-06,
+          "inference_seconds": [
+            0.00010729999939940171
+          ],
+          "end_to_end_seconds": [
+            0.0008428000001003966
+          ],
+          "decode_seconds": 0.0008428000001003966,
+          "microseconds_per_shot": 26.337500003137393,
+          "unseen_fraction": null,
+          "threads": 1,
+          "device": "cpu",
+          "train_noise": {
+            "after_clifford_depolarization": 0.03,
+            "before_round_data_depolarization": 0.03,
+            "before_measure_flip_probability": 0.03,
+            "after_reset_flip_probability": 0.03
+          },
+          "test_noise": {
+            "after_clifford_depolarization": 0.03,
+            "before_round_data_depolarization": 0.03,
+            "before_measure_flip_probability": 0.03,
+            "after_reset_flip_probability": 0.03
+          }
+        }
+      ],
+      "paired": [
+        {
+          "a": "prediction_0",
+          "b": "prediction_1",
+          "a_wrong_b_correct": 0,
+          "a_correct_b_wrong": 0,
+          "both_wrong": 0,
+          "both_correct": 32
+        },
+        {
+          "a": "prediction_0",
+          "b": "prediction_2",
+          "a_wrong_b_correct": 0,
+          "a_correct_b_wrong": 3,
+          "both_wrong": 0,
+          "both_correct": 29
+        },
+        {
+          "a": "prediction_1",
+          "b": "prediction_2",
+          "a_wrong_b_correct": 0,
+          "a_correct_b_wrong": 3,
+          "both_wrong": 0,
+          "both_correct": 29
+        }
+      ],
+      "interpretation": "Fixed-shot evaluation; small runs are smoke tests, not superiority evidence.",
+      "timing": "Wall seconds, CUDA synchronized. Setup=fit/load; warmup separate. Inference=batched forward/decode only; end-to-end=encoding/transfers/forward/assembly per repeat, excluding fit/load/warmup. decode_seconds=median end-to-end."
+    },
+    "dataset-e90420d6632542c1b99b43476b717dd8\\dataset.json": {
+      "schema_version": 2,
+      "config": {
+        "code": "repetition",
+        "distance": 3,
+        "rounds": 1,
+        "p": 0.03,
+        "after_clifford_depolarization": null,
+        "before_round_data_depolarization": null,
+        "before_measure_flip_probability": null,
+        "after_reset_flip_probability": null,
+        "seed": 42
+      },
+      "fingerprint": "cd96a05d7549ef4b9d4d05cc93d96aeaf17fcdc1f3dc75a1a620fe68d3fbb713",
+      "identity": {
+        "circuit_hash": "0e0f192553b723a3c25262f18a43d965b0a34526f14fa381d1d52df65bf2aca7",
+        "dem_hash": "706953705cce4d6a38fb0036d242791b41554b33754d8204c9dd055542ab0042",
+        "layout_hash": "ab865b900be6c409e3e8735de22df8fc0a7bcf1ad649419ef3d5b41fc38be13f",
+        "num_detectors": 4,
+        "num_observables": 1
+      },
+      "seeds": {
+        "train": 16138347438539916964,
+        "validation": 134183728835869882,
+        "test": 11601846009883706861
+      },
+      "shots": {
+        "train": 64,
+        "validation": 16,
+        "test": 32
+      },
+      "sampling_seconds": 0.002445399999487563,
+      "stim_version": "1.16.0",
+      "samples_hash": "9cf7db88ab4f77251c34fde6fb21eada85f3bbd9198a5ce1d4e4551f725c66a4"
+    },
+    "_jobs\\job-50c342ee3f33433086d55f3108e7381f.json": {
+      "id": "job-50c342ee3f33433086d55f3108e7381f",
+      "kind": "sample",
+      "status": "succeeded",
+      "request": {
+        "circuit": {
+          "code": "repetition",
+          "distance": 3,
+          "rounds": 1,
+          "p": 0.03,
+          "after_clifford_depolarization": null,
+          "before_round_data_depolarization": null,
+          "before_measure_flip_probability": null,
+          "after_reset_flip_probability": null,
+          "seed": 42
+        },
+        "sampling": {
+          "train_shots": 64,
+          "validation_shots": 16,
+          "test_shots": 32
+        }
+      },
+      "created_at": "2026-10-08T11:48:36.556547+00:00",
+      "updated_at": "2026-10-08T11:48:38.838882+00:00",
+      "artifact_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+      "error": null
+    },
+    "_jobs\\job-a7e5b0fd05484889ada87967ed7ab53c.json": {
+      "id": "job-a7e5b0fd05484889ada87967ed7ab53c",
+      "kind": "compare",
+      "status": "succeeded",
+      "request": {
+        "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+        "checkpoint_ids": [
+          "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8"
+        ],
+        "benchmark": {
+          "warmup": 0,
+          "repeats": 1,
+          "batch_size": 32,
+          "threads": 1,
+          "device": "cpu"
+        },
+        "allow_cross_p": false
+      },
+      "created_at": "2026-10-08T11:49:06.828693+00:00",
+      "updated_at": "2026-10-08T11:49:06.867876+00:00",
+      "artifact_id": "comparison-a544c324a208420a8a19b226336bbad0",
+      "error": null
+    },
+    "_jobs\\job-da7a55aef5784606ac6038a5f9547657.json": {
+      "id": "job-da7a55aef5784606ac6038a5f9547657",
+      "kind": "train",
+      "status": "succeeded",
+      "request": {
+        "dataset_id": "dataset-e90420d6632542c1b99b43476b717dd8",
+        "training": {
+          "device": "cpu",
+          "architecture": "mlp",
+          "epochs": 1,
+          "patience": 1,
+          "batch_size": 32,
+          "learning_rate": 0.001,
+          "hidden_size": 8,
+          "seed": 123,
+          "threads": 1
+        }
+      },
+      "created_at": "2026-10-08T11:48:53.045951+00:00",
+      "updated_at": "2026-10-08T11:48:54.829389+00:00",
+      "artifact_id": "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8",
+      "error": null
+    }
+  },
+  "sha256": {
+    "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8\\checkpoint.json": "f3346fc2bd32f67e227507be80c75cd72261ffb81687400873ca933ff0ca89f9",
+    "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8\\circuit.stim": "20576f93477d4aa6d30fc4c5cd0f8602fb12bc25987a6f774cce58b40fabc191",
+    "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8\\dem.dem": "8f39245ae85eac03c35238125cdeccc27b6eabb4f56f6de03c0a459d3ede5025",
+    "checkpoint-839667acfaa94277a1b9ab3f0f1da3c8\\weights.pt": "485a652d065767f80553d7818bd20f4a9d14235b7b056db3b4758dccb06f295f",
+    "comparison-a544c324a208420a8a19b226336bbad0\\predictions.npz": "084499405a2b1c011661b9531a734bf8dca175c12a2bd5f5929623c7a2058c73",
+    "comparison-a544c324a208420a8a19b226336bbad0\\report.json": "eb0e7276f542e9fdb8da04908004ae19cf3f8ad0854ad5d0869cecd3517fdaed",
+    "dataset-e90420d6632542c1b99b43476b717dd8\\circuit.stim": "20576f93477d4aa6d30fc4c5cd0f8602fb12bc25987a6f774cce58b40fabc191",
+    "dataset-e90420d6632542c1b99b43476b717dd8\\dataset.json": "a55e44b564e58e002f39c0ce87501f6d93a8fdd2975db97f3d52d5f31054baf5",
+    "dataset-e90420d6632542c1b99b43476b717dd8\\dem.dem": "8f39245ae85eac03c35238125cdeccc27b6eabb4f56f6de03c0a459d3ede5025",
+    "dataset-e90420d6632542c1b99b43476b717dd8\\samples.npz": "9cf7db88ab4f77251c34fde6fb21eada85f3bbd9198a5ce1d4e4551f725c66a4",
+    "_jobs\\job-50c342ee3f33433086d55f3108e7381f.json": "489522ac92d2edda6fa64d11ecb1c47e0e97362a2ff7afec4e24cd205294ea55",
+    "_jobs\\job-a7e5b0fd05484889ada87967ed7ab53c.json": "1b9aa3e189d38b65ed70d318ddad677753844c2af6b23d82b15788860c590d41",
+    "_jobs\\job-da7a55aef5784606ac6038a5f9547657.json": "14d58fa98963dc0cf86967b78a364b93a58eacfe7f08c07f8aaeed3b08dc5a1d"
+  }
+}

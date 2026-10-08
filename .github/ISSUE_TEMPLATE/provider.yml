@@ -1,0 +1,20 @@
+name: Provider compatibility
+description: Report an observed native tool-calling issue.
+body:
+  - type: markdown
+    attributes:
+      value: "Do not run additional paid calls just to file an issue. Never share API keys or provider reasoning text."
+  - type: textarea
+    id: settings
+    attributes:
+      label: Provider and exact model
+      description: Commit, provider name, model ID, token/step/tool/time budgets. Omit private endpoint URLs.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Existing sanitized finish reason/usage/status, native tool-call validity, expected behavior. A model listing alone does not establish tool support.
+    validations:
+      required: true

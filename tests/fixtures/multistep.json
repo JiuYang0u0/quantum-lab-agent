@@ -1,0 +1,8 @@
+{
+  "sample": {"circuit": {"rounds": 1}, "sampling": {"train_shots": 64, "validation_shots": 16, "test_shots": 32}},
+  "report": {"artifact_id": "comparison-fixture", "dataset_id": "dataset-fixture", "results": [
+    {"decoder": "mwpm", "checkpoint_id": null, "prediction_key": "prediction_0", "shots": 32, "errors": 1, "logical_error_rate": 0.03125, "ci": [0.005, 0.16], "decode_seconds": 0.001},
+    {"decoder": "lookup", "checkpoint_id": null, "prediction_key": "prediction_1", "shots": 32, "errors": 1, "logical_error_rate": 0.03125, "ci": [0.005, 0.16], "decode_seconds": 0.001},
+    {"decoder": "mlp", "checkpoint_id": "checkpoint-fixture", "prediction_key": "prediction_2", "shots": 32, "errors": 2, "logical_error_rate": 0.0625, "ci": [0.017, 0.202], "decode_seconds": 0.002}
+  ]}
+}

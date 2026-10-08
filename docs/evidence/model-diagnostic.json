@@ -1,0 +1,12 @@
+{
+  "model": "google/gemma-4-e2b",
+  "max_tokens": 16,
+  "kind": "basic_completion_not_tool_test",
+  "response": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": []
+  },
+  "status": "responded",
+  "elapsed_seconds": 9.014999999897555
+}

@@ -1,0 +1,526 @@
+{
+  "source_commit": "950afd8",
+  "b_commit": "515aa81e92a19705a59e18dcc6806cbc600dd328",
+  "actual_provider": "nvidia",
+  "model": "deepseek-ai/deepseek-v4.1-flash",
+  "fixture": false,
+  "max_tokens": 2048,
+  "actual_qec_url": "http://127.0.0.1:18000",
+  "cases": {
+    "qec": {
+      "run_id": "ee0aed7c00234101989131000a72dd8f",
+      "status": "report_ready",
+      "limits": {
+        "limits": {
+          "max_steps": 5,
+          "max_tools": 5,
+          "seconds": 300.0
+        },
+        "finalization": {
+          "reports": 1,
+          "interpret": false,
+          "interpretation_tokens": 128,
+          "interpretation_seconds": 15
+        },
+        "family": "qec"
+      },
+      "completion_count": 3,
+      "tool_count": 3,
+      "run_elapsed_seconds": 43.90408515930176,
+      "agent_elapsed_seconds": 43.84335994720459,
+      "finish": {
+        "status": "report_ready",
+        "tools_used": 3,
+        "task_completion": "verified_report_goal",
+        "termination_source": "policy"
+      },
+      "completion_metadata": [
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 1766,
+            "completion_tokens": 132,
+            "total_tokens": 1898,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 8
+            }
+          }
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 1957,
+            "completion_tokens": 125,
+            "total_tokens": 2082,
+            "prompt_tokens_details": {
+              "cached_tokens": 1728
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 27
+            }
+          }
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 2130,
+            "completion_tokens": 116,
+            "total_tokens": 2246,
+            "prompt_tokens_details": {
+              "cached_tokens": 1920
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3
+            }
+          }
+        }
+      ],
+      "export_http": {
+        "json": 200,
+        "markdown": 200
+      },
+      "graphics": [],
+      "assessment": {
+        "run_id": "ee0aed7c00234101989131000a72dd8f",
+        "task_success": true,
+        "termination_status": "report_ready",
+        "report_produced": true,
+        "failure_classifications": [],
+        "tool_errors": [],
+        "dataset_id": "dataset-af053975eb3844168aafdb6280e1d086",
+        "checkpoint_id": "checkpoint-7e5ac4a2ddcd41fd92d50a5b46d22774",
+        "comparison_id": "comparison-39e060dbe49440b3bf0b6b5cc1e6309d",
+        "steps": [
+          {
+            "finish_reason": "tool_calls",
+            "usage": {
+              "prompt_tokens": 1766,
+              "completion_tokens": 132,
+              "total_tokens": 1898,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 8
+              }
+            }
+          },
+          {
+            "finish_reason": "tool_calls",
+            "usage": {
+              "prompt_tokens": 1957,
+              "completion_tokens": 125,
+              "total_tokens": 2082,
+              "prompt_tokens_details": {
+                "cached_tokens": 1728
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 27
+              }
+            }
+          },
+          {
+            "finish_reason": "tool_calls",
+            "usage": {
+              "prompt_tokens": 2130,
+              "completion_tokens": 116,
+              "total_tokens": 2246,
+              "prompt_tokens_details": {
+                "cached_tokens": 1920
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 3
+              }
+            }
+          }
+        ],
+        "tool_calls": [
+          {
+            "step": 1,
+            "tool": "qec_sample",
+            "args": {
+              "circuit": {
+                "code": "repetition",
+                "distance": 3,
+                "rounds": 1,
+                "p": 0.03,
+                "seed": 42
+              },
+              "sampling": {
+                "train_shots": 64,
+                "validation_shots": 16,
+                "test_shots": 32
+              }
+            }
+          },
+          {
+            "step": 2,
+            "tool": "qec_train",
+            "args": {
+              "dataset_id": "dataset-af053975eb3844168aafdb6280e1d086",
+              "training": {
+                "architecture": "mlp",
+                "epochs": 1
+              }
+            }
+          },
+          {
+            "step": 3,
+            "tool": "qec_compare",
+            "args": {
+              "dataset_id": "dataset-af053975eb3844168aafdb6280e1d086",
+              "checkpoint_ids": [
+                "checkpoint-7e5ac4a2ddcd41fd92d50a5b46d22774"
+              ]
+            }
+          }
+        ],
+        "jobs": [
+          {
+            "step": 1,
+            "id": "job-6b10765acb4843b3ae76008071b624cd",
+            "kind": "sample",
+            "status": "succeeded",
+            "artifact_id": "dataset-af053975eb3844168aafdb6280e1d086"
+          },
+          {
+            "step": 2,
+            "id": "job-9ee9ee3fa32d4a50bf022792a5113f33",
+            "kind": "train",
+            "status": "succeeded",
+            "artifact_id": "checkpoint-7e5ac4a2ddcd41fd92d50a5b46d22774"
+          },
+          {
+            "step": 3,
+            "id": "job-261bb21f32b54dbaa02e0a769e136633",
+            "kind": "compare",
+            "status": "succeeded",
+            "artifact_id": "comparison-39e060dbe49440b3bf0b6b5cc1e6309d"
+          }
+        ],
+        "numeric_provenance": [
+          {
+            "decoder": "mwpm",
+            "checkpoint_id": null,
+            "prediction_key": "prediction_0",
+            "shots": 32,
+            "errors": 0,
+            "logical_error_rate": 0.0,
+            "ci": [
+              0.0,
+              0.1071827150573635
+            ],
+            "setup_seconds": 0.00041849999979604036,
+            "warmup_seconds": 3.2000025385059416e-06,
+            "inference_seconds": [
+              0.0005487999987963121
+            ],
+            "end_to_end_seconds": [
+              0.0005731999990530312
+            ],
+            "decode_seconds": 0.0005731999990530312,
+            "microseconds_per_shot": 17.912499970407225,
+            "unseen_fraction": null,
+            "threads": 1,
+            "device": "cpu",
+            "train_noise": null,
+            "test_noise": {
+              "after_clifford_depolarization": 0.03,
+              "before_round_data_depolarization": 0.03,
+              "before_measure_flip_probability": 0.03,
+              "after_reset_flip_probability": 0.03
+            },
+            "source": "comparison-39e060dbe49440b3bf0b6b5cc1e6309d#prediction_0",
+            "dataset_id": "dataset-af053975eb3844168aafdb6280e1d086"
+          },
+          {
+            "decoder": "lookup",
+            "checkpoint_id": null,
+            "prediction_key": "prediction_1",
+            "shots": 32,
+            "errors": 0,
+            "logical_error_rate": 0.0,
+            "ci": [
+              0.0,
+              0.1071827150573635
+            ],
+            "setup_seconds": 0.000248799999098992,
+            "warmup_seconds": 2.6000016077887267e-06,
+            "inference_seconds": [
+              9.169999975711107e-05
+            ],
+            "end_to_end_seconds": [
+              0.00011069999891333282
+            ],
+            "decode_seconds": 0.00011069999891333282,
+            "microseconds_per_shot": 3.4593749660416506,
+            "unseen_fraction": 0.0,
+            "threads": 1,
+            "device": "cpu",
+            "train_noise": {
+              "after_clifford_depolarization": 0.03,
+              "before_round_data_depolarization": 0.03,
+              "before_measure_flip_probability": 0.03,
+              "after_reset_flip_probability": 0.03
+            },
+            "test_noise": {
+              "after_clifford_depolarization": 0.03,
+              "before_round_data_depolarization": 0.03,
+              "before_measure_flip_probability": 0.03,
+              "after_reset_flip_probability": 0.03
+            },
+            "source": "comparison-39e060dbe49440b3bf0b6b5cc1e6309d#prediction_1",
+            "dataset_id": "dataset-af053975eb3844168aafdb6280e1d086"
+          },
+          {
+            "decoder": "mlp",
+            "checkpoint_id": "checkpoint-7e5ac4a2ddcd41fd92d50a5b46d22774",
+            "prediction_key": "prediction_2",
+            "shots": 32,
+            "errors": 3,
+            "logical_error_rate": 0.09375,
+            "ci": [
+              0.032400962626319516,
+              0.24218499335778831
+            ],
+            "setup_seconds": 0.01987149999695248,
+            "warmup_seconds": 3.2000025385059416e-06,
+            "inference_seconds": [
+              0.0003338999995321501
+            ],
+            "end_to_end_seconds": [
+              0.0009201999964716379
+            ],
+            "decode_seconds": 0.0009201999964716379,
+            "microseconds_per_shot": 28.756249889738683,
+            "unseen_fraction": null,
+            "threads": 1,
+            "device": "cpu",
+            "train_noise": {
+              "after_clifford_depolarization": 0.03,
+              "before_round_data_depolarization": 0.03,
+              "before_measure_flip_probability": 0.03,
+              "after_reset_flip_probability": 0.03
+            },
+            "test_noise": {
+              "after_clifford_depolarization": 0.03,
+              "before_round_data_depolarization": 0.03,
+              "before_measure_flip_probability": 0.03,
+              "after_reset_flip_probability": 0.03
+            },
+            "source": "comparison-39e060dbe49440b3bf0b6b5cc1e6309d#prediction_2",
+            "dataset_id": "dataset-af053975eb3844168aafdb6280e1d086"
+          }
+        ],
+        "termination_source": "policy",
+        "task_completion": "verified_report_goal",
+        "model_stop_observed": false,
+        "interpretation_status": "not_requested"
+      }
+    },
+    "quantum": {
+      "run_id": "3a1ddf7cb0794b049ba966c9913a948f",
+      "status": "completed",
+      "limits": {
+        "limits": {
+          "max_steps": 5,
+          "max_tools": 5,
+          "seconds": 300.0
+        },
+        "finalization": {
+          "reports": 0,
+          "interpret": false,
+          "interpretation_tokens": 128,
+          "interpretation_seconds": 15
+        },
+        "family": "quantum"
+      },
+      "completion_count": 4,
+      "tool_count": 5,
+      "run_elapsed_seconds": 43.22194027900696,
+      "agent_elapsed_seconds": 40.14932918548584,
+      "finish": {
+        "status": "completed",
+        "tools_used": 5,
+        "task_completion": "unverified",
+        "termination_source": "model"
+      },
+      "completion_metadata": [
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 1455,
+            "completion_tokens": 89,
+            "total_tokens": 1544,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 7
+            }
+          }
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 1769,
+            "completion_tokens": 317,
+            "total_tokens": 2086,
+            "prompt_tokens_details": {
+              "cached_tokens": 1408
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 59
+            }
+          }
+        },
+        {
+          "finish_reason": "tool_calls",
+          "usage": {
+            "prompt_tokens": 2988,
+            "completion_tokens": 85,
+            "total_tokens": 3073,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 5
+            }
+          }
+        },
+        {
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 3931,
+            "completion_tokens": 369,
+            "total_tokens": 4300,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 4
+            }
+          }
+        }
+      ],
+      "export_http": {
+        "json": 200,
+        "markdown": 200
+      },
+      "graphics": [],
+      "strict_historical_assessment": {
+        "assessment_version": 2,
+        "case": "bell_ideal",
+        "task_success": false,
+        "stop_reason": "completed",
+        "termination_source": "model",
+        "criteria": {
+          "native_calls": true,
+          "no_tool_errors": true,
+          "one_read_report": true,
+          "saved_report_matches": true,
+          "target": true,
+          "report_target": true,
+          "parameters": true,
+          "bound_ordered_chain": true,
+          "unique_case_chain": false
+        },
+        "failures": [
+          "ValueError: expected one build/verify/simulation/read chain",
+          "unique_case_chain"
+        ],
+        "measurements": null
+      },
+      "scientific_assessment": {
+        "assessment_version": 2,
+        "case": "bell_ideal",
+        "task_success": true,
+        "stop_reason": "completed",
+        "termination_source": "model",
+        "criteria": {
+          "native_calls": true,
+          "no_tool_errors": true,
+          "one_read_report": true,
+          "saved_report_matches": true,
+          "target": true,
+          "report_target": true,
+          "parameters": true,
+          "bound_ordered_chain": true,
+          "unique_case_chain": true,
+          "build_request_binding": true,
+          "verify_request_binding": true,
+          "simulation_request_binding": true,
+          "read_request_binding": true,
+          "ideal_target_verified": true,
+          "independent_density": true,
+          "fidelity": true,
+          "counts": true,
+          "grounded_report": true
+        },
+        "failures": [],
+        "measurements": {
+          "circuit_id": "e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c",
+          "result_id": "bae9355cb6b2e306ec54cb8a42c1fecb94422aa63e5db8ca966f0019aeb5fd30",
+          "ideal_target_fidelity": 0.9999999999999997,
+          "expected_fidelity": 0.9999999999999997,
+          "reported_fidelity": 1.0,
+          "density_matrix_fidelity": 1.0,
+          "counts": {
+            "00": 527,
+            "11": 497
+          },
+          "expected_probabilities": {
+            "00": 0.4999999999999999,
+            "01": 0.0,
+            "10": 0.0,
+            "11": 0.4999999999999999
+          },
+          "config": {
+            "circuit_id": "e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c",
+            "mode": "ideal",
+            "noise": {
+              "depolarizing_1q": 0,
+              "depolarizing_2q": 0,
+              "readout": 0
+            },
+            "seed": 7,
+            "shots": 1024
+          },
+          "versions": {
+            "numpy": "2.5.3",
+            "qiskit": "2.5.2",
+            "qiskit-aer": "0.17.2"
+          },
+          "independent_method": "NumPy density evolution; Qiskit gate matrices; Pauli twirl (no Aer)",
+          "caveat": "Ideal target verification is build correctness; noisy fidelity is a separate metric. Counts have sampling uncertainty."
+        }
+      },
+      "assessment_scope": "Full native pairing validated first. Historical exact-four-tool assessment rejects the extra analyze. Scientific assessment projects only analyze away; full original trace and bound resource result retained.",
+      "resources": {
+        "circuit_id": "e777b6ecbb003a9ced1bdbf019b9d0ee215eea779769fc36ef3f41c8df01eb9c",
+        "basis_gates": [
+          "rz",
+          "sx",
+          "x",
+          "cx"
+        ],
+        "optimization_level": 0,
+        "seed_transpiler": 7,
+        "connectivity": "all-to-all; no routing or hardware durations",
+        "measurements_included": false,
+        "depth": 4,
+        "gate_counts": {
+          "rz": 2,
+          "sx": 1,
+          "cx": 1
+        },
+        "two_qubit_gates": 1,
+        "density_matrix_bytes": 256
+      }
+    }
+  },
+  "total_completions": 7
+}

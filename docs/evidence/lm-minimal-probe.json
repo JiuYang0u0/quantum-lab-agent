@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "run_id": "d1b450e679db44f38d3df97b070d2b36",
+  "created": 1791363315.754603,
+  "prompt": "Minimal single-tool Gemma capability probe; at most two completions",
+  "events": [
+    {
+      "seq": 61,
+      "created": 1791363331.2744596,
+      "kind": "model",
+      "data": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": []
+      }
+    },
+    {
+      "seq": 62,
+      "created": 1791363331.291113,
+      "kind": "finish",
+      "data": {
+        "status": "no_tool_calls"
+      }
+    }
+  ]
+}

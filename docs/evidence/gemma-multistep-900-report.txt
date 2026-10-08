@@ -1,0 +1,10 @@
+{"result": {"artifact_id": "dataset-bfee119b4d854d73b2c8bcb09d7aab2a", "job_id": "job-f045bfd7cd0f45deb93c4b899139baed", "status": "succeeded"}, "tool": "qec_sample"}
+
+{"result": {"artifact_id": "checkpoint-acf02fff0bd54c659aa0183cdd6cf791", "job_id": "job-0e5358b3e58a4729b1bbbd940f4235d1", "status": "succeeded"}, "tool": "qec_train"}
+
+Comparison [comparison-760158bcf0354b7980a2b8679f0c9217] dataset [dataset-bfee119b4d854d73b2c8bcb09d7aab2a]
+decoder | errors/shots | LER | CI | decode seconds | source
+mwpm | 0/32 | 0 | [0, 0.107182715057] | 0.00031440006569 | [comparison-760158bcf0354b7980a2b8679f0c9217#prediction_0]
+lookup | 0/32 | 0 | [0, 0.107182715057] | 4.40999865532e-05 | [comparison-760158bcf0354b7980a2b8679f0c9217#prediction_1]
+mlp | 3/32 | 0.09375 | [0.0324009626263, 0.242184993358] | 0.000523200025782 | [comparison-760158bcf0354b7980a2b8679f0c9217#prediction_2]
+Small fixed-shot runs are smoke tests, not superiority evidence.

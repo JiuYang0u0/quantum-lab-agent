@@ -1,0 +1,90 @@
+{
+  "run_id": "6d0274702e894581b10c97025a456019",
+  "task_success": false,
+  "termination_status": "time_budget",
+  "report_produced": false,
+  "failure_classifications": [
+    "time_budget",
+    "incomplete_or_invalid_artifact_chain",
+    "no_grounded_report"
+  ],
+  "tool_errors": [],
+  "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+  "checkpoint_id": null,
+  "comparison_id": null,
+  "steps": [
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 739,
+        "completion_tokens": 854,
+        "total_tokens": 1593,
+        "completion_tokens_details": {
+          "reasoning_tokens": 795
+        }
+      },
+      "step": 1,
+      "elapsed_seconds": 155.26500000013039
+    },
+    {
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 891,
+        "completion_tokens": 583,
+        "total_tokens": 1474,
+        "completion_tokens_details": {
+          "reasoning_tokens": 523
+        }
+      },
+      "step": 2,
+      "elapsed_seconds": 110.04700000002049
+    }
+  ],
+  "tool_calls": [
+    {
+      "step": 1,
+      "tool": "qec_sample",
+      "args": {
+        "circuit": {
+          "distance": 3,
+          "p": 0.03,
+          "rounds": 1,
+          "seed": 42
+        },
+        "sampling": {
+          "test_shots": 32,
+          "train_shots": 64,
+          "validation_shots": 16
+        }
+      }
+    },
+    {
+      "step": 2,
+      "tool": "qec_train",
+      "args": {
+        "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+        "training": {
+          "architecture": "mlp",
+          "epochs": 1
+        }
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "step": 1,
+      "id": "job-3215a3de5b764aadb4cd26786552207b",
+      "kind": "sample",
+      "status": "succeeded",
+      "artifact_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3"
+    },
+    {
+      "step": 2,
+      "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+      "kind": "train",
+      "status": "running",
+      "artifact_id": null
+    }
+  ],
+  "numeric_provenance": []
+}

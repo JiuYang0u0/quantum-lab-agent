@@ -1,0 +1,3165 @@
+{
+  "schema_version": 1,
+  "run_id": "6d0274702e894581b10c97025a456019",
+  "created": 1791367363.376265,
+  "prompt": "Run a tiny QEC experiment: sample a repetition code distance 3, rounds 1, p 0.03, seed 42 with train_shots 64, validation_shots 16, test_shots 32. Train an mlp for 1 epoch on the returned dataset using remaining CPU defaults. Compare that same dataset using the returned checkpoint against MWPM and lookup. Use only artifact IDs returned by your tools. Produce a grounded report with errors/shots, LER, CI, decode seconds and artifact citations, then stop. The compare tool already returns the report; no need to list artifacts.",
+  "events": [
+    {
+      "seq": 1,
+      "created": 1791367363.3863811,
+      "kind": "experiment",
+      "data": {
+        "limits": {
+          "max_steps": 6,
+          "max_tools": 4,
+          "seconds": 300.0
+        }
+      }
+    },
+    {
+      "seq": 2,
+      "created": 1791367363.3962722,
+      "kind": "provider_settings",
+      "data": {
+        "base_url": "http://127.0.0.1:1234/v1",
+        "model": "google/gemma-4-e2b",
+        "qec_url": "http://127.0.0.1:18000",
+        "max_tokens": 1024
+      }
+    },
+    {
+      "seq": 3,
+      "created": 1791367518.6824994,
+      "kind": "model",
+      "data": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "zDu4YsWnW3NjmgOYzgu5CRUd9RawHbSM",
+            "type": "function",
+            "function": {
+              "name": "qec_sample",
+              "arguments": "{\"circuit\": {\"distance\": 3, \"p\": 0.03, \"rounds\": 1, \"seed\": 42}, \"sampling\": {\"test_shots\": 32, \"train_shots\": 64, \"validation_shots\": 16}}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seq": 4,
+      "created": 1791367518.719452,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 739,
+          "completion_tokens": 854,
+          "total_tokens": 1593,
+          "completion_tokens_details": {
+            "reasoning_tokens": 795
+          }
+        },
+        "step": 1,
+        "elapsed_seconds": 155.26500000013039
+      }
+    },
+    {
+      "seq": 5,
+      "created": 1791367518.744779,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_sample",
+        "args": {
+          "circuit": {
+            "distance": 3,
+            "p": 0.03,
+            "rounds": 1,
+            "seed": 42
+          },
+          "sampling": {
+            "test_shots": 32,
+            "train_shots": 64,
+            "validation_shots": 16
+          }
+        }
+      }
+    },
+    {
+      "seq": 6,
+      "created": 1791367518.7941358,
+      "kind": "intent",
+      "data": {
+        "intent_id": "802752ad908a4c2481ec3f5c1d9b813b327fc83a4d7ad42d8a3ad84a1d1ab485",
+        "tool": "qec_sample",
+        "args": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        }
+      }
+    },
+    {
+      "seq": 7,
+      "created": 1791367519.1246808,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 8,
+      "created": 1791367519.4450626,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 9,
+      "created": 1791367519.7724278,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 10,
+      "created": 1791367520.1167908,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 11,
+      "created": 1791367520.4283605,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 12,
+      "created": 1791367520.7206428,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 13,
+      "created": 1791367521.046567,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 14,
+      "created": 1791367521.353458,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 15,
+      "created": 1791367521.677233,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 16,
+      "created": 1791367521.9860609,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 17,
+      "created": 1791367522.298526,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 18,
+      "created": 1791367522.583299,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 19,
+      "created": 1791367522.8786962,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 20,
+      "created": 1791367523.174136,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 21,
+      "created": 1791367523.4698386,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 22,
+      "created": 1791367523.762013,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 23,
+      "created": 1791367524.0406525,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 24,
+      "created": 1791367524.3403764,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 25,
+      "created": 1791367524.6319335,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 26,
+      "created": 1791367524.926524,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 27,
+      "created": 1791367525.2201967,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 28,
+      "created": 1791367525.5102422,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 29,
+      "created": 1791367525.805859,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 30,
+      "created": 1791367526.1028812,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 31,
+      "created": 1791367526.3854835,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 32,
+      "created": 1791367526.6605012,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 33,
+      "created": 1791367526.9553924,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 34,
+      "created": 1791367527.2545362,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 35,
+      "created": 1791367527.530616,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 36,
+      "created": 1791367527.8288171,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 37,
+      "created": 1791367528.1074119,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "running",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:18.885633+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 38,
+      "created": 1791367528.4080257,
+      "kind": "job",
+      "data": {
+        "id": "job-3215a3de5b764aadb4cd26786552207b",
+        "kind": "sample",
+        "status": "succeeded",
+        "request": {
+          "circuit": {
+            "code": "repetition",
+            "distance": 3,
+            "rounds": 1,
+            "p": 0.03,
+            "after_clifford_depolarization": null,
+            "before_round_data_depolarization": null,
+            "before_measure_flip_probability": null,
+            "after_reset_flip_probability": null,
+            "seed": 42
+          },
+          "sampling": {
+            "train_shots": 64,
+            "validation_shots": 16,
+            "test_shots": 32
+          }
+        },
+        "created_at": "2026-10-07T10:05:18.870733+00:00",
+        "updated_at": "2026-10-07T10:05:28.309948+00:00",
+        "artifact_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+        "error": null
+      }
+    },
+    {
+      "seq": 39,
+      "created": 1791367528.4271536,
+      "kind": "tool_result",
+      "data": {
+        "tool": "qec_sample",
+        "result": {
+          "job_id": "job-3215a3de5b764aadb4cd26786552207b",
+          "artifact_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "status": "succeeded"
+        }
+      }
+    },
+    {
+      "seq": 40,
+      "created": 1791367638.4999278,
+      "kind": "model",
+      "data": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "RuQrDSvxsDW95jX7OkxCMtdBAi9ga2Ea",
+            "type": "function",
+            "function": {
+              "name": "qec_train",
+              "arguments": "{\"dataset_id\": \"dataset-5b26e6307c1d4a86add261fa0828ecb3\", \"training\": {\"architecture\": \"mlp\", \"epochs\": 1}}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seq": 41,
+      "created": 1791367638.551302,
+      "kind": "model_metadata",
+      "data": {
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 891,
+          "completion_tokens": 583,
+          "total_tokens": 1474,
+          "completion_tokens_details": {
+            "reasoning_tokens": 523
+          }
+        },
+        "step": 2,
+        "elapsed_seconds": 110.04700000002049
+      }
+    },
+    {
+      "seq": 42,
+      "created": 1791367638.587684,
+      "kind": "tool_call",
+      "data": {
+        "tool": "qec_train",
+        "args": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "architecture": "mlp",
+            "epochs": 1
+          }
+        }
+      }
+    },
+    {
+      "seq": 43,
+      "created": 1791367638.6488264,
+      "kind": "intent",
+      "data": {
+        "intent_id": "b660be8cb0962f91ff048a60d70682283c4378e3952a114a44acac1ad27794fe",
+        "tool": "qec_train",
+        "args": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "hidden_size": 8,
+            "learning_rate": 0.001,
+            "seed": 123,
+            "device": "cpu",
+            "threads": 1
+          }
+        }
+      }
+    },
+    {
+      "seq": 44,
+      "created": 1791367639.0177712,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 45,
+      "created": 1791367639.3931453,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 46,
+      "created": 1791367639.7562058,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 47,
+      "created": 1791367640.0713334,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 48,
+      "created": 1791367640.3739269,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 49,
+      "created": 1791367640.7364357,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 50,
+      "created": 1791367641.1663167,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 51,
+      "created": 1791367641.573541,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 52,
+      "created": 1791367641.958556,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 53,
+      "created": 1791367642.263208,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 54,
+      "created": 1791367642.7496033,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 55,
+      "created": 1791367643.4312067,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 56,
+      "created": 1791367643.8823826,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 57,
+      "created": 1791367644.3082998,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 58,
+      "created": 1791367644.8451483,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 59,
+      "created": 1791367645.491126,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 60,
+      "created": 1791367645.9517772,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 61,
+      "created": 1791367646.4211707,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 62,
+      "created": 1791367646.831063,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 63,
+      "created": 1791367647.2400312,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 64,
+      "created": 1791367647.6989357,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 65,
+      "created": 1791367648.1409426,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 66,
+      "created": 1791367648.5113525,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 67,
+      "created": 1791367648.8216481,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 68,
+      "created": 1791367649.1198602,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 69,
+      "created": 1791367649.4456065,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 70,
+      "created": 1791367649.779703,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 71,
+      "created": 1791367650.0959094,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 72,
+      "created": 1791367650.4376895,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 73,
+      "created": 1791367650.7553165,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 74,
+      "created": 1791367651.0559294,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 75,
+      "created": 1791367651.3831666,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 76,
+      "created": 1791367651.7073317,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 77,
+      "created": 1791367652.0212,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 78,
+      "created": 1791367652.4139955,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 79,
+      "created": 1791367652.7397046,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 80,
+      "created": 1791367653.0351672,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 81,
+      "created": 1791367653.3373716,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 82,
+      "created": 1791367653.6255121,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 83,
+      "created": 1791367653.9109764,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 84,
+      "created": 1791367654.2931623,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 85,
+      "created": 1791367654.6211054,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 86,
+      "created": 1791367654.959434,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 87,
+      "created": 1791367655.2639616,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 88,
+      "created": 1791367655.5631578,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 89,
+      "created": 1791367655.8538413,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 90,
+      "created": 1791367656.1532083,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 91,
+      "created": 1791367656.4732823,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 92,
+      "created": 1791367656.8669524,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 93,
+      "created": 1791367657.249456,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 94,
+      "created": 1791367657.5867474,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 95,
+      "created": 1791367657.8991802,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 96,
+      "created": 1791367658.2037108,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 97,
+      "created": 1791367658.5189562,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 98,
+      "created": 1791367658.8686788,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 99,
+      "created": 1791367659.183928,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 100,
+      "created": 1791367659.5063853,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 101,
+      "created": 1791367659.8224006,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 102,
+      "created": 1791367660.1361353,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 103,
+      "created": 1791367660.4933727,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 104,
+      "created": 1791367660.8211403,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 105,
+      "created": 1791367661.1484318,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 106,
+      "created": 1791367661.4519475,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 107,
+      "created": 1791367661.7535434,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 108,
+      "created": 1791367662.071748,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 109,
+      "created": 1791367662.3679254,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 110,
+      "created": 1791367662.6760724,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 111,
+      "created": 1791367662.971825,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 112,
+      "created": 1791367663.271457,
+      "kind": "job",
+      "data": {
+        "id": "job-d1cf6b8c40cf4f8f9495cb4c5449acdc",
+        "kind": "train",
+        "status": "running",
+        "request": {
+          "dataset_id": "dataset-5b26e6307c1d4a86add261fa0828ecb3",
+          "training": {
+            "device": "cpu",
+            "architecture": "mlp",
+            "epochs": 1,
+            "patience": 1,
+            "batch_size": 32,
+            "learning_rate": 0.001,
+            "hidden_size": 8,
+            "seed": 123,
+            "threads": 1
+          }
+        },
+        "created_at": "2026-10-07T10:07:18.833464+00:00",
+        "updated_at": "2026-10-07T10:07:18.845845+00:00",
+        "artifact_id": null,
+        "error": null
+      }
+    },
+    {
+      "seq": 113,
+      "created": 1791367663.401474,
+      "kind": "finish",
+      "data": {
+        "status": "time_budget",
+        "tools_used": 2
+      }
+    }
+  ]
+}
