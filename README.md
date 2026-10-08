@@ -64,9 +64,9 @@ requirements, acceptance evidence, and the boundaries of version 0.1.0.
 | [Troubleshooting](docs/troubleshooting.md) | [Limitations](docs/limitations.md) |
 | [Roadmap](docs/roadmap.md) | [Release readiness](docs/release-readiness.md) |
 
-The [original exhaustive usage guide](docs/legacy-usage.md) is preserved verbatim
-as historical documentation; its original root-relative links resolve from the
-repository root. Current instructions are in the guides above.
+The [original exhaustive usage guide](docs/legacy-usage.md) is retained as
+historical documentation with relative links repaired for its new location.
+See [public-copy provenance](docs/public-release.md); current instructions are above.
 
 ## Development and licensing
 

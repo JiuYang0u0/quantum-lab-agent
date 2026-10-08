@@ -63,8 +63,8 @@ Counts 不能證明量子保真度；理想驗證、含噪 density matrix 保真
 | [疑難排解](docs/troubleshooting.md) | [限制](docs/limitations.md) |
 | [路線圖](docs/roadmap.md) | [發布準備狀態](docs/release-readiness.md) |
 
-[原始完整使用指南](docs/legacy-usage.md)逐位元保留作為歷史文件；其中原本的
-根目錄相對連結仍應從儲存庫根目錄解析。目前操作方式請以上方整理後指南為準。
+[原始完整使用指南](docs/legacy-usage.md)保留作為歷史文件，相對連結已配合新位置修正。
+公開副本處理方式見[來源說明](docs/public-release.md)。目前操作方式請以上方整理後指南為準。
 
 ## 開發與授權
 
